@@ -3,6 +3,14 @@
     <div id="inner">
       <img src="../../assets/icon/HIP-Logo.svg" id="logo" alt="Logo">
       <h6 id="logo-text">Hongik University Intelligent Platform</h6>
+      <!-- <ion-buttons slot="end">
+        <ion-button (click)="navigateTo('home')">
+          <ion-icon slot="icon-only" name="home"></ion-icon>
+        </ion-button>
+        <ion-button (click)="navigateTo('about')">
+          <ion-icon slot="icon-only" name="information-circle"></ion-icon>
+        </ion-button>
+      </ion-buttons> -->
       <ion-searchbar></ion-searchbar>
     </div>
   </ion-toolbar>
@@ -11,4 +19,8 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
   </ion-header>
+</ion-content>
+
+<ion-content>
+  <p>Welcome to the Home Page!</p>
 </ion-content>
