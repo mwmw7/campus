@@ -3,7 +3,7 @@ ion-menu-button {
 }
 
 #logo{
-  width: 5%;
+  width: 90px;
   margin: 10px;
 }
 
@@ -26,14 +26,14 @@ ion-menu-button {
 
 
 
-#toolbar {
-  box-shadow: none;
+ion-toolbar.md {
+  --box-shadow: none;
 
 }
 
 #logo-text {
   color: #976BEE;
-  width: 200px;
+  width: 260px;
   // word-break: keep-all;
 }
 
@@ -43,7 +43,23 @@ ion-menu-button {
   justify-content: center;
 }
 
-icon-search{
-  border-radius: 10px;
-  background-color: #F4F4F4;
+ion-searchbar.md{
+  --border-radius: 10px;
+  --background: #f4f5fb;
+  --box-shadow: none;
+  --width: 10%;
 }
+
+ion-avatar{
+  --width: 10px;
+  --height: 10px;
+  --min-height: 10px;
+  --min-width:10px
+}
+
+ion-header{
+  --box-shadow: none;
+}
+
+
+

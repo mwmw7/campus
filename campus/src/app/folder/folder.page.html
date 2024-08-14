@@ -1,7 +1,7 @@
-<ion-header [translucent]="true">
-  <ion-toolbar id="tooplbar">
+<ion-header>
+  <ion-toolbar>
     <div id="inner">
-      <img src="../../assets/icon/HIP-Logo.svg" id="logo" alt="Logo">
+      <img src="../../assets/svg/HIP-Logo.svg" id="logo" alt="Logo">
       <h6 id="logo-text">Hongik University Intelligent Platform</h6>
       <!-- <ion-buttons slot="end">
         <ion-button (click)="navigateTo('home')">
@@ -11,7 +11,10 @@
           <ion-icon slot="icon-only" name="information-circle"></ion-icon>
         </ion-button>
       </ion-buttons> -->
-      <ion-searchbar></ion-searchbar>
+      <ion-searchbar placeholder="검색"></ion-searchbar>
+      <ion-avatar>
+        <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+      </ion-avatar>
     </div>
   </ion-toolbar>
 </ion-header>
@@ -22,5 +25,4 @@
 </ion-content>
 
 <ion-content>
-  <p>Welcome to the Home Page!</p>
 </ion-content>
