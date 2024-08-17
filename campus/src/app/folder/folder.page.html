@@ -1,21 +1,35 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>{{ folder }}</ion-title>
+    <div id="inner">
+      <div class="menu-left">
+        <img src="../../assets/svg/HIP-Logo.svg" id="logo" alt="Logo">
+        <h6 id="logo-text">Hongik University Intelligent Platform</h6>
+         <ion-buttons slot="end">
+            <ion-label>
+            전시관
+            </ion-label>
+
+
+             <ion-label>
+               학습룸
+             </ion-label>
+
+        </ion-buttons>
+      </div>
+      <div class="menu-right">
+        <ion-searchbar placeholder=""></ion-searchbar>
+        <ion-avatar class="user-avatar">
+          <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+        </ion-avatar>
+      </div>
+    </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">{{ folder }}</ion-title>
-    </ion-toolbar>
   </ion-header>
+</ion-content>
 
-  <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content>
 </ion-content>
