@@ -23,12 +23,8 @@ export class TopBarComponent {
   ];
 
   constructor() {
-    window.alert('test')
 
   }
 
-  abc(){
-    window.alert('test')
-  }
   ngOnInit() {}
 }

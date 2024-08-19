@@ -12,16 +12,18 @@ const routes: Routes = [
   {
     path: 'top-bar', component: TopBarComponent
   },
-  // {
-  //   path: 'sidemenu', component: SidemenuComponent
-  // },
+  {
+    path: 'sidemenu', component: SidemenuComponent
+  },
   {
     path: 'gallery',
     loadChildren: () => import('./gallery/gallery.module').then( m => m.GalleryPageModule)
-  },  {
+  },
+  {
     path: 'studyroommain',
     loadChildren: () => import('./studyroommain/studyroommain.module').then( m => m.StudyroommainPageModule)
   },
+
 
 // 사이드 메뉴 경로
 

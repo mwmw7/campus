@@ -1,8 +1,19 @@
 import { Component } from '@angular/core';
+import { IonicModule } from '@ionic/angular';
+import {RouterLink, RouterLinkActive} from "@angular/router";
+import {NgForOf} from "@angular/common";
+
 @Component({
   selector: 'app-sidemenu',
   templateUrl: './sidemenu.component.html',
   styleUrls: ['./sidemenu.component.scss'],
+  imports: [
+    IonicModule,
+    RouterLink,
+    NgForOf,
+    RouterLinkActive
+  ],
+  standalone: true
 })
 export class SidemenuComponent {
   public appPages = [
@@ -12,4 +23,10 @@ export class SidemenuComponent {
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   constructor() {}
+
+  ngOnInit() {}
 }
+
+
+
+
