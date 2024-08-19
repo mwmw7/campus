@@ -25,8 +25,25 @@ const routes: Routes = [
   },
   {
     path: 'studyroommain',
-    loadChildren: () => import('./studyroommain/studyroommain.module').then( m => m.StudyroommainPageModule)
+    loadChildren: () => import('./studyroommain/studyroomMain.module').then( m => m.StudyroommainPageModule)
   },
+  {
+    path: 'exhibitionmain',
+    loadChildren: () => import('./exhibitionmain/exhibitionmain.module').then( m => m.ExhibitionmainPageModule)
+  },
+  {
+    path: 'firstpage',
+    loadChildren: () => import('./firstpage/firstpage.module').then( m => m.FirstpagePageModule)
+  },
+  {
+    path: 'secondpage',
+    loadChildren: () => import('./secondpage/secondpage.module').then( m => m.SecondpagePageModule)
+  },
+  {
+    path: 'thirdpage',
+    loadChildren: () => import('./thirdpage/thirdpage.module').then( m => m.ThirdpagePageModule)
+  },
+
 
 
 // 사이드 메뉴 경로
