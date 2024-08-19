@@ -6,7 +6,7 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { SidemenuComponent } from './sidemenu/sidemenu.component';
+import { SidemenuComponent } from './sidemenucomponent/sidemenu.component';
 
 @NgModule({
   declarations: [AppComponent, SidemenuComponent],

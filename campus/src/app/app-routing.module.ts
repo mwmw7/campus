@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { SidemenuComponent } from './sidemenu/sidemenu.component'; // 사이드 메뉴 컴포넌트
+import { SidemenuComponent } from './sidemenucomponent/sidemenu.component'; // 사이드 메뉴 컴포넌트
 
 const routes: Routes = [
   {
