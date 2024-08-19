@@ -1,26 +1,23 @@
-<ion-app>
-  <ion-toolbar>
-    <ion-grid id="inner">
-      <ion-row>
-        <ion-col size="6" class="menu-left">
-          <img src="../../assets/svg/HIP-Logo.svg" id="logo" alt="Logo">
-          <h6 id="logo-text">Hongik University Intelligent Platform</h6>
-          <ion-item *ngFor="let p of TopPages; let i = index"
-                    routerDirection="root"
-                    [routerLink]="[p.url]"
-                    lines="none"
-                    detail="false"
-                    routerLinkActive="selected">
-            <ion-label>{{ p.title }}</ion-label>
-          </ion-item>
-        </ion-col>
-        <ion-col size="6" class="menu-right">
-          <ion-searchbar placeholder=""></ion-searchbar>
-          <ion-avatar class="user-avatar">
-            <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-          </ion-avatar>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+<ion-toolbar>
+    <div id="inner">
+      <div class="menu-left">
+        <img src="../../assets/svg/HIP-Logo.svg" id="logo" alt="Logo">
+        <h6 id="logo-text">Hongik University Intelligent Platform</h6>
+        <ion-item *ngFor="let p of TopPages"
+                  [routerLink]="[p.url]"
+                  routerDirection="root"
+                  lines="none"
+                  detail="false"
+                  routerLinkActive="selected">
+          <ion-label>{{ p.title }}</ion-label>
+        </ion-item>
+      </div>
+      <div class="menu-right">
+        <ion-searchbar placeholder=""></ion-searchbar>
+        <ion-avatar class="user-avatar">
+          <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+        </ion-avatar>
+      </div>
+    </div>
   </ion-toolbar>
-</ion-app>
+

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
-import {RouterLink} from "@angular/router";
+import {RouterLink, RouterLinkActive} from "@angular/router";
+import {NgForOf} from "@angular/common";
+import {alert} from "ionicons/icons";
 
 @Component({
   selector: 'app-top-bar',
@@ -8,7 +10,9 @@ import {RouterLink} from "@angular/router";
   styleUrls: ['./top-bar.component.scss'],
   imports: [
     IonicModule,
-    RouterLink
+    RouterLink,
+    NgForOf,
+    RouterLinkActive
   ],
   standalone: true
 })
@@ -18,7 +22,13 @@ export class TopBarComponent {
     { title: '학습룸', url: '/folder/outbox' },
   ];
 
-  constructor() { }
+  constructor() {
+    window.alert('test')
 
+  }
+
+  abc(){
+    window.alert('test')
+  }
   ngOnInit() {}
 }
