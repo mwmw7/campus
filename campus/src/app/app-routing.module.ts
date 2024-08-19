@@ -16,6 +16,10 @@ const routes: Routes = [
     path: 'sidemenu', component: SidemenuComponent
   },
   {
+    path: 'studyroommain',
+    loadChildren: () => import('./studyroommain/studyroomMain.module').then( m => m.StudyroommainPageModule)
+  },
+  {
     path: 'gallery',
     loadChildren: () => import('./gallery/gallery.module').then( m => m.GalleryPageModule)
   },
@@ -26,7 +30,6 @@ const routes: Routes = [
 
 
 // 사이드 메뉴 경로
-
 ];
 
 @NgModule({
