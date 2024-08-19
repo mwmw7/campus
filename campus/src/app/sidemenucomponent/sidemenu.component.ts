@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 })
 export class SidemenuComponent {
   public appPages = [
-    { title: '홈', url: '/folder/inbox', icon: 'mail' },
+    { title: '홈', url: '/studyroommain', icon: 'mail' },
     { title: '강의', url: '/folder/outbox', icon: 'paper-plane' },
     { title: '프로젝트', url: '/folder/favorites', icon: 'heart' }
   ];

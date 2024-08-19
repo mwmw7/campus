@@ -14,7 +14,11 @@ const routes: Routes = [
   },
   {
     path: 'sidemenu', component: SidemenuComponent 
-  }, // 사이드 메뉴 경로
+  },   {
+    path: 'studyroommain',
+    loadChildren: () => import('./studyroommain/studyroomMain.module').then( m => m.StudyroommainPageModule)
+  },
+// 사이드 메뉴 경로
 ];
 
 @NgModule({
