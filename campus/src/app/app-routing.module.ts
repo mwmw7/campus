@@ -16,10 +16,6 @@ const routes: Routes = [
     path: 'sidemenu', component: SidemenuComponent
   },
   {
-    path: 'gallery',
-    loadChildren: () => import('./gallery/gallery.module').then( m => m.GalleryPageModule)
-  },
-  {
     path: 'studyroommain',
     loadChildren: () => import('./studyroommain/studyroommain.module').then( m => m.StudyroommainPageModule)
   },
