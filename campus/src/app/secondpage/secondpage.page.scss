@@ -1,4 +1,57 @@
-ion-refresher .refresher-pulling,
-ion-refresher .refresher-refreshing {
-  display: none;
+.searchbox {
+  width: 100%;
+  height: 350px;
+  background: linear-gradient(213deg, #FDF2FF 0%, #E9F1FF 100%);
+}
+
+
+.searchbox .searchcontent {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 수평 중앙 정렬 */
+  justify-content: center; /* 수직 중앙 정렬 */
+  height: 100%; /* 부모 요소의 높이를 차지하게 */
+  margin: auto;
+}
+
+.searchbox .searchmessage {
+  font-size: 28px;
+  font-weight: bold;
+  align-self: flex-start; /* 메시지를 왼쪽 정렬 */
+}
+
+.searchbox .searchmessage .output {
+  color: #7269EE;
+}
+
+.searchbox .searchcomponent {
+  display: flex;
+  width: 100%; /* 부모 요소의 너비를 차지하게 */
+  align-items: center; /* 자식 요소를 수직 중앙 정렬 */
+  margin-top: 10px;
+}
+
+.searchbox .searchbar {
+
+  height: 42px; /* 검색창의 높이 설정 */
+  display: flex;
+  padding: 0;
+  --border-radius: 10px 0px 0px 10px;
+
+
+}
+
+.searchbox .searchbarbtn {
+  height: 42px; /* 버튼의 높이를 검색창과 동일하게 설정 */
+  width: 80px;
+  display: flex;
+  justify-content: flex-end;
+  float: right;
+  margin: 0;
+  font-weight: 700;
+  --border-radius: 0px 10px 10px 0;
+
+
+
 }
