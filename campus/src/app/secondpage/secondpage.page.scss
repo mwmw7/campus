@@ -1,9 +1,22 @@
+
+ion-checkbox::part(container) {
+  border-radius: 6px;
+  border: 1px solid #DFDFDF;
+}
+
+.shadow-box {
+  padding: 20px;
+  background-color: white;
+  position: relative; /* 그림자 효과를 위한 위치 설정 */
+  box-shadow: 0 -0.1px 10px rgba(0, 0, 0, 0.2); /* 위쪽 그림자 */
+}
+
+
 .searchbox {
   width: 100%;
   height: 350px;
   background: linear-gradient(213deg, #FDF2FF 0%, #E9F1FF 100%);
 }
-
 
 .searchbox .searchcontent {
   width: 50%;
@@ -51,7 +64,67 @@
   margin: 0;
   font-weight: 700;
   --border-radius: 0px 10px 10px 0;
+}
+.maincontent {
+  display: flex; /* Flexbox 활성화 */
+  height: 100vh; /* 전체 높이를 사용 */
+  margin-top: -80px;
 
+}
 
+.section1 {
+  flex: 1;
+  background-color: #ffffff; /* 첫 번째 섹션 색상 */
+  border-top-left-radius: 30px;
+  min-width: 250px;
+  display: flex;
+  justify-content: center;
+}
+.section1 .classycontent{
+  width: 80%;
+  height: 100%;
+  margin-top: 50px;
+  font-weight: 550;
+}
 
+.section1 .classycontent .clssfy{
+  width: 100%;
+  height: 150px;
+  border-radius: 20px;
+  margin-top: 10px;
+  border: 1px solid #DFDFDF;
+  padding-top: 17px;
+}
+
+.section1 .classycontent .clssfy .currycu{
+  margin-left: 20px;
+}
+
+.section1 .classycontent .clssfy .reset{
+  margin-left: 30px;
+  font-size: 13px;
+  color: #B0B0B0;
+}
+
+.section1 .classycontent .clssfy .reset .reseticon{
+  margin-left: 8px;
+  color: #B0B0B0;
+}
+
+.classname{
+  margin-top: 5px;
+  margin-left: 20px;
+  font-weight: 500;
+  font-size: 15px;
+  color: #4F4F4F;
+}
+
+.classnamebox{
+margin-top: 25px;
+}
+
+.section2 {
+  flex: 5;
+  background-color: #73849a; /* 두 번째 섹션 색상 */
+  border-top-right-radius: 30px;
 }
