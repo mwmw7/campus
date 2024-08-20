@@ -10,8 +10,8 @@ import { SidemenuComponent } from './sidemenucomponent/sidemenu.component';
 import {TopBarComponent} from "./top-bar/top-bar.component";
 
 @NgModule({
-  declarations: [AppComponent, SidemenuComponent],
-    imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, TopBarComponent],
+  declarations: [AppComponent],
+    imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, TopBarComponent, SidemenuComponent],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
