@@ -13,14 +13,17 @@
                   lines="none"
                   detail="false"
                   routerLinkActive="selected">
-          <ion-label>{{ p.title }}</ion-label>
+          <ion-label class="title-text">{{ p.title }}</ion-label>
         </ion-item>
       </div>
+        <ion-searchbar class="title-searchbar" placeholder=""></ion-searchbar>
       <div class="menu-right">
-        <ion-searchbar placeholder=""></ion-searchbar>
-        <ion-avatar class="user-avatar">
-          <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-        </ion-avatar>
+        <ion-button class="login" fill="clear">
+          <ion-label class="login-text" routerLink="/loginpage" >로그인</ion-label>
+        </ion-button>
+        <ion-button class="login" fill="clear">
+          <ion-label class="login-text">회원가입</ion-label>
+        </ion-button>
       </div>
     </div>
   </ion-toolbar>
