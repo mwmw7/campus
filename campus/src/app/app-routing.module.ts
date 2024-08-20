@@ -6,7 +6,7 @@ import {TopBarComponent} from "./top-bar/top-bar.component"; // 사이드 메뉴
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/Inbox',
+    redirectTo: 'main',
     pathMatch: 'full'
   },
   {
@@ -16,23 +16,19 @@ const routes: Routes = [
     path: 'sidemenu', component: SidemenuComponent
   },
   {
-    path: 'studyroommain',
-    loadChildren: () => import('./studyroommain/studyroomMain.module').then( m => m.StudyroommainPageModule)
-  },
-  {
     path: 'gallery',
     loadChildren: () => import('./gallery/gallery.module').then( m => m.GalleryPageModule)
   },
   {
     path: 'studyroommain',
-    loadChildren: () => import('./studyroommain/studyroomMain.module').then( m => m.StudyroommainPageModule)
+    loadChildren: () => import('./studyroommain/studyroommain.module').then( m => m.StudyroommainPageModule)
   },
   {
     path: 'exhibitionmain',
     loadChildren: () => import('./exhibitionmain/exhibitionmain.module').then( m => m.ExhibitionmainPageModule)
   },
   {
-    path: 'firstpage',
+    path: 'main',
     loadChildren: () => import('./firstpage/firstpage.module').then( m => m.FirstpagePageModule)
   },
   {
@@ -47,6 +43,7 @@ const routes: Routes = [
 
 
 // 사이드 메뉴 경로
+
 ];
 
 @NgModule({
