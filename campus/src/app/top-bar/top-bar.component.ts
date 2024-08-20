@@ -18,8 +18,8 @@ import {alert} from "ionicons/icons";
 })
 export class TopBarComponent {
   public TopPages = [
-    { title: '전시관', url: '/gallery' },
-    { title: '학습룸', url: '/folder/outbox' },
+    { title: '전시관', url: '/secondpage' },
+    { title: '학습룸', url: '/thirdpage' },
   ];
 
   constructor() {
