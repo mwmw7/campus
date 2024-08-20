@@ -3,7 +3,7 @@
       <div class="menu-left">
         <button routerLink="/firstpage" id="button-logo">
           <img src="../../assets/svg/HIP-Logo.svg" id="logo" alt="Logo">
-          <h6 id="logo-text">Hongik University Intelligent Platform</h6>
+          <ion-text id="logo-text">Hongik University Intelligent Platform</ion-text>
         </button>
         <ion-item *ngFor="let p of TopPages"
                   [routerLink]="[p.url]"
