@@ -4,6 +4,7 @@
   background: linear-gradient(213deg, #FDF2FF 0%, #E9F1FF 100%);
 }
 
+
 .searchbox .searchcontent {
   width: 50%;
   display: flex;
@@ -32,16 +33,25 @@
 }
 
 .searchbox .searchbar {
-  flex: 1; /* 검색창이 가능한 공간을 차지하도록 설정 */
+
   height: 42px; /* 검색창의 높이 설정 */
-  --border-radius: 20px;
+  display: flex;
+  padding: 0;
+  --border-radius: 10px 0px 0px 10px;
+
+
 }
 
 .searchbox .searchbarbtn {
   height: 42px; /* 버튼의 높이를 검색창과 동일하게 설정 */
-  padding: 0 16px; /* 버튼의 좌우 패딩 설정 */
-  display: flex; /* 버튼 내부의 내용도 중앙 정렬 */
-  align-items: center; /* 버튼 내부의 내용 수직 중앙 정렬 */
-  margin-left: -50px;
-  --border-radius: 20px;
+  width: 80px;
+  display: flex;
+  justify-content: flex-end;
+  float: right;
+  margin: 0;
+  font-weight: 700;
+  --border-radius: 0px 10px 10px 0;
+
+
+
 }
