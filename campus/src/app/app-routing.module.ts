@@ -38,9 +38,6 @@ const routes: Routes = [
   {
     path: 'thirdpage',
     loadChildren: () => import('./thirdpage/thirdpage.module').then( m => m.ThirdpagePageModule)
-  },  {
-    path: 'loginpage',
-    loadChildren: () => import('./loginpage/loginpage.module').then( m => m.LoginpagePageModule)
   },
 
 
