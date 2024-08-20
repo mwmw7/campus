@@ -3,7 +3,7 @@ ion-menu-button {
 }
 
 #logo{
-  width: 70px;
+  width: 80px;
   margin: 10px;
   margin-left:10px;
 }
@@ -12,6 +12,7 @@ ion-menu-button {
   background: white;
   display: flex;
   align-items: center;
+  height: 70px;
 }
 
 #container {
@@ -44,8 +45,13 @@ ion-toolbar{
 
 #logo-text {
   color: #976BEE;
-  width: 170px;
+  width: 150px;
   word-wrap: break-word;
+  //display: flex;
+  text-align: left;
+  font-size: 15px;
+  text-transform: none; /* 대문자 변환 방지 */
+  letter-spacing: -1px;
 }
 
 
@@ -70,7 +76,7 @@ ion-header{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0px 20px;
+  //margin: 0px 20px;
 }
 
 .menu-left{
