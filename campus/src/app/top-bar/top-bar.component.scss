@@ -1,3 +1,5 @@
+
+
 ion-menu-button {
   color: var(--ion-color-primary);
 }
@@ -5,7 +7,7 @@ ion-menu-button {
 #logo{
   width: 80px;
   margin: 10px;
-  margin-left:10px;
+  justify-content: center;
 }
 
 #button-logo{
@@ -55,18 +57,46 @@ ion-toolbar{
 }
 
 
-ion-searchbar{
+ion-searchbar.title-searchbar{
   --border-radius: 50px;
   --background: #f4f5fb;
   --box-shadow: none;
-  width: 90%;
+  width: 50%;
+  max-width: 30%;
+  display: flex;
+  justify-content: right;
+
 }
 
+button.user{
+  border-radius: 100px;
+  cursor:pointer;
+
+}
+
+
+
+//아바타의 큰 박스 : 이미지의 배경색 박스
+.avator-container{
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  background: #EDF2F9;
+  border-radius: 100px;
+}
+
+//아바타의 작은 박스 : 이미지가 들어가 있는 박스
 .user-avatar{
+  display: flex;
   width: 30px;
   height: 30px;
-  margin: 0 10px;
+  justify-content: center;
+  //margin: 0 10px;
 }
+
+
 
 ion-header{
   --box-shadow: none;
@@ -88,15 +118,24 @@ ion-header{
 }
 
 ion-label{
-  color: #1b1b1b;
-  font-weight: 800;
-  font-size: 20px;
   margin:0 10px;
+  font-weight: bold;
+}
+
+.title-text{
+  color: #000000;
+  --font-weight: 900;
+  font-size: 18px;
+  letter-spacing: -1px;
+}
+
+.title-text:hover{
+  color: #6d62fd;
+  --font-weight: 900;
 }
 
 ion-label:hover{
-  color: #9e65ff;
-  background: #ffffff;
+  --color: #9e65ff;
 }
 
 .menu-right{
