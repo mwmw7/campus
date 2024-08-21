@@ -1,6 +1,20 @@
-<ion-app>
-  <ion-content id="content">
+<ion-content>
+  <div class="content-inner">
     <img src="../../assets/svg/HIP-Logo.svg" alt="logo">
-    <ion-input id="input"></ion-input>
-  </ion-content>
-</ion-app>
+    <div style="margin-bottom:20px; color: #6d62fd; font-size:13px; font-weight: bold">당신의 미래를 응원합니다.</div>
+    <div>
+      <div class="input-login" >
+        <ion-icon style=" color:#9B9B9B; width: 20px; margin-right: 10px;" name="person"></ion-icon>
+        <ion-input color="none" placeholder="아이디"></ion-input>
+      </div>
+      <div class="input-login" >
+        <ion-icon  style=" color:#9B9B9B; width: 20px; margin-right: 10px;" name="lock-closed"></ion-icon>
+        <ion-input color="none" placeholder="비밀번호">
+        </ion-input>
+      </div>
+      <div style="height: 15px;"></div>
+    </div>
+    <ion-button class="btn-login" >로그인하기</ion-button>
+    <ion-button class="btn-join" fill="outline">회원가입</ion-button>
+  </div>
+</ion-content>
