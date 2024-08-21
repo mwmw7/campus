@@ -1,12 +1,11 @@
 ion-card {
   width: 350px;       // 너비 설정
-  height: 400px;      // 높이 설정
+  height: 300px;      // 높이 설정
   overflow: hidden;   // 내용이 카드 크기를 넘지 않도록 설정
   margin: 10px;       // 카드 간 간격을 주기 위한 마진
 }
 
 ion-card-header {
-  text-align: center; // 제목과 부제목을 중앙 정렬
   overflow: hidden;   // 넘치는 내용 숨기기
   white-space: nowrap; // 한 줄로 표시
   text-overflow: ellipsis; // 넘치는 내용 생략 기호로 표시

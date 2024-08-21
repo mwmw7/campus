@@ -28,7 +28,14 @@ export class SecondpagePage implements OnInit {
     }
   ];
 
+  accordionTitle: string = '최신순';
+  isOpen: boolean = true;
+
   constructor() { }
+  changeTitle(newTitle: string) {
+    this.accordionTitle = newTitle; // 제목 변경
+    this.isOpen = !this.isOpen; // 아코디언 열림/닫힘 상태 반전
+  }
 
   ngOnInit() {
   }
