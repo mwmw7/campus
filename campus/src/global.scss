@@ -56,6 +56,8 @@ $hip-color:#9189F1;
   font-weight: bold;
 }
 
-ion-content{
-  font-family: 'pretendard-R',sans-serif;
+:root{
+    --ion-font-family: 'pretendard-R',sans-serif;
+    --ion-font-size: 10px;
+
 }
