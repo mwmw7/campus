@@ -1,7 +1,7 @@
 <ion-toolbar>
     <div id="inner">
       <div class="menu-left">
-        <ion-button routerLink="/firstpage" id="button-logo" fill="clear">
+        <ion-button routerLink="/main" id="button-logo" fill="clear">
           <img src="../../assets/svg/HIP-Logo.svg" id="logo" alt="Logo">
           <ion-text id="logo-text">
             <h6>Hongik University Intelligent Platform</h6>
@@ -18,10 +18,10 @@
       </div>
         <ion-searchbar class="title-searchbar" placeholder=""></ion-searchbar>
       <div class="menu-right">
-        <ion-button class="login" fill="clear">
-          <ion-label class="login-text" routerLink="/loginpage" >로그인</ion-label>
+        <ion-button  routerLink="/loginpage" class="login" fill="clear">
+          <ion-label class="login-text" >로그인</ion-label>
         </ion-button>
-        <ion-button class="login" fill="clear">
+        <ion-button (click)="openModal()" class="login" fill="clear">
           <ion-label class="login-text">회원가입</ion-label>
         </ion-button>
       </div>

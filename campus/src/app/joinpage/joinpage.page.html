@@ -1,13 +1,63 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>joinpage</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <div class="content-inner">
+    <img src="../../assets/svg/HIP-Logo.svg" alt="logo">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">joinpage</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <div style="display: flex; flex-direction: row; justify-content: center; align-content: center">
+      <div style="margin-bottom: 20px; color: #1c1c1c; font-size: 13px; font-weight: 400">
+        이미 회원이신가요?
+        <button routerLink="/loginpage" style="color: #6d62fd; font-weight: 900; background-color: white; margin: 10px; font-family: 'pretendard-B', serif;">
+          로그인하기
+        </button>
+      </div>
+    </div>
+
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div class="input-group">
+        <div class="title-login">아이디</div>
+        <div class="input-login">
+          <ion-input formControlName="id" color="none" placeholder="아이디 입력"></ion-input>
+        </div>
+
+        <div class="title-login">비밀번호</div>
+        <div class="input-login">
+          <ion-input formControlName="password" type="password" color="none" placeholder="비밀번호 입력"></ion-input>
+        </div>
+
+        <div class="title-login">닉네임</div>
+        <div class="input-login">
+          <ion-input formControlName="nick_name" color="none" placeholder="닉네임을 입력해주세요"></ion-input>
+        </div>
+
+        <div class="title-login">이름</div>
+        <div class="input-login">
+          <ion-input formControlName="user_name" color="none" placeholder="이름을 입력해주세요"></ion-input>
+        </div>
+
+        <div class="title-login">이메일</div>
+        <div class="input-login">
+          <ion-input formControlName="email" type="email" color="none" placeholder="이메일 주소"></ion-input>
+        </div>
+
+        <div class="title-login">세대</div>
+        <div class="input-login">
+          <ion-input formControlName="generation" color="none" placeholder="세대"></ion-input>
+        </div>
+
+        <div class="title-login">사용자 역할</div>
+        <div class="input-login">
+          <ion-select formControlName="user_role" placeholder="사용자 역할">
+            <ion-select-option value="student">학생</ion-select-option>
+            <ion-select-option value="instructor">강사</ion-select-option>
+          </ion-select>
+        </div>
+      </div>
+
+      <div style="height: 15px;"></div>
+      <ion-button class="btn-login" type="submit" [disabled]="registerForm.invalid">회원가입</ion-button>
+    </form>
+
+    <button routerLink="/main" style="color: #939393; background-color: white; margin: 10px; font-size:12px">
+      홈으로 가기
+    </button>
+  </div>
 </ion-content>

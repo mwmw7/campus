@@ -3,15 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SidemenuComponent } from './sidemenucomponent/sidemenu.component';
 import {TopBarComponent} from "./top-bar/top-bar.component";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [AppComponent],
-    imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, TopBarComponent, SidemenuComponent],
+    imports: [BrowserModule, ReactiveFormsModule,
+      IonicModule.forRoot(),
+      HttpClientModule,
+      AppRoutingModule,
+      TopBarComponent,
+      SidemenuComponent],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

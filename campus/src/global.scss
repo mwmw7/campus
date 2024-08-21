@@ -35,3 +35,29 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+
+
+
+//-----------------------------------
+//추가로 작성한 메타버스 플랫폼 전역 css변수
+
+$hip-color:#9189F1;
+
+@font-face {
+  font-family: 'pretendard-B'; // 폰트 이름
+  src: url("assets/font/Pretendard-Bold.otf");
+  font-weight: bold; // 폰트 두께
+}
+
+@font-face {
+  font-family: 'pretendard-R';
+  src: url("assets/font/Pretendard-Regular.otf");
+  font-weight: bold;
+}
+
+:root{
+    --ion-font-family: 'pretendard-R',sans-serif;
+    --ion-font-size: 10px;
+
+}
