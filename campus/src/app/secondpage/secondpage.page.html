@@ -6,6 +6,7 @@
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content>
   <div class="searchbox">
     <div class = "searchcontent">
@@ -18,8 +19,8 @@
       </div>
     </div>
   </div>
-  <div class="maincontent">
-    <div class="section section1 shadow-box">
+  <div class="maincontent shadow-box">
+    <div class="section section1">
       <div class ="classycontent"><ion-icon name="search" ></ion-icon> 프로젝트 탐색
         <div class ="clssfy">
           <span class="currycu">교욱과정</span><span class="reset">초기화<ion-icon name="reload-outline" class="reseticon"></ion-icon></span>
@@ -35,6 +36,38 @@
       </div>
     </div>
 
-    <div class="section section2">섹션 2</div>
+    <div class="section2">
+<!--   정렬 기능-->
+      <ion-accordion-group class = "sortgroup">
+        <ion-accordion [value]="isOpen ? 'first' : ''">
+          <ion-item slot="header" class="custom">
+            <ion-label>{{ accordionTitle }}</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">
+            <ion-button expand="full" (click)="changeTitle('최신순')">최신순</ion-button>
+          </div>
+          <div class="ion-padding" slot="content">
+            <ion-button expand="full" (click)="changeTitle('조회순')">조회순</ion-button>
+          </div>
+          <div class="ion-padding" slot="content">
+            <ion-button expand="full" (click)="changeTitle('오래된순')">오래된순</ion-button>
+          </div>
+        </ion-accordion>
+      </ion-accordion-group>
+
+
+
+      <!--      카드-->
+      <ng-container *ngFor="let card of cards" class="cardcontainer">
+        <app-card
+          [title]="card.title"
+          [teamname]="card.teamname"
+          [content]="card.content"
+          [image]="card.image">
+        </app-card>
+      </ng-container>
+    </div>
   </div>
+
+
 </ion-content>
