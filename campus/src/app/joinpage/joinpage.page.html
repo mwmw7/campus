@@ -15,7 +15,7 @@
       <div class="input-group">
         <div class="title-login">아이디</div>
         <div class="input-login">
-          <ion-input formControlName="username" color="none" placeholder="아이디 입력"></ion-input>
+          <ion-input formControlName="id" color="none" placeholder="아이디 입력"></ion-input>
         </div>
 
         <div class="title-login">비밀번호</div>
@@ -23,19 +23,32 @@
           <ion-input formControlName="password" type="password" color="none" placeholder="비밀번호 입력"></ion-input>
         </div>
 
-        <div class="title-login">비밀번호 확인</div>
-        <div class="input-login">
-          <ion-input formControlName="confirmPassword" type="password" color="none" placeholder="비밀번호 재입력"></ion-input>
-        </div>
-
         <div class="title-login">닉네임</div>
         <div class="input-login">
-          <ion-input formControlName="nickname" color="none" placeholder="닉네임을 입력해주세요"></ion-input>
+          <ion-input formControlName="nick_name" color="none" placeholder="닉네임을 입력해주세요"></ion-input>
+        </div>
+
+        <div class="title-login">이름</div>
+        <div class="input-login">
+          <ion-input formControlName="user_name" color="none" placeholder="이름을 입력해주세요"></ion-input>
         </div>
 
         <div class="title-login">이메일</div>
         <div class="input-login">
           <ion-input formControlName="email" type="email" color="none" placeholder="이메일 주소"></ion-input>
+        </div>
+
+        <div class="title-login">세대</div>
+        <div class="input-login">
+          <ion-input formControlName="generation" color="none" placeholder="세대"></ion-input>
+        </div>
+
+        <div class="title-login">사용자 역할</div>
+        <div class="input-login">
+          <ion-select formControlName="user_role" placeholder="사용자 역할">
+            <ion-select-option value="student">학생</ion-select-option>
+            <ion-select-option value="instructor">강사</ion-select-option>
+          </ion-select>
         </div>
       </div>
 

@@ -17,20 +17,22 @@ export class JoinpagePage implements OnInit {
     private authService: AuthService  // 서비스 주입
   ) {
     this.registerForm = this.fb.group({
-      username: ['', Validators.required],
-      password: ['', [Validators.required, Validators.minLength(6)]],
-      confirmPassword: ['', Validators.required],
-      nickname: ['', Validators.required],
+      user_name: ['', Validators.required],
+      nick_name: ['', Validators.required],
+      user_role: ['', Validators.required],
+      id: ['', Validators.required],
+      password: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-    }, { validators: this.passwordMatchValidator });
+      generation: ['', Validators.required]
+    });
   }
 
   ngOnInit() {}
 
-  passwordMatchValidator(form: FormGroup) {
-    return form.get('password')!.value === form.get('confirmPassword')!.value
-      ? null : { mismatch: true };
-  }
+  // passwordMatchValidator(form: FormGroup) {
+  //   return form.get('password')!.value === form.get('confirmPassword')!.value
+  //     ? null : { mismatch: true };
+  // }
 
   async onSubmit() {
     if (this.registerForm.valid) {
