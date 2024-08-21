@@ -42,6 +42,10 @@ const routes: Routes = [
     path: 'joinpage',
     loadChildren: () => import('./joinpage/joinpage.module').then( m => m.JoinpagePageModule)
   },
+  {
+    path: 'join-modal',
+    loadChildren: () => import('./join-modal/join-modal.module').then( m => m.JoinModalPageModule)
+  },
 
 
 
