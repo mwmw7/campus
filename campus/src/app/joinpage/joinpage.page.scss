@@ -1,0 +1,62 @@
+.content-inner{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.input-login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  border:solid 2px #DFDFDF;
+  border-radius: 10px;
+  padding: 15px;
+
+  width: 350px;
+  margin : 10px 0;
+  height: 50px;
+}
+
+.title-login{
+  font-size: 14px;
+}
+
+
+
+.input-login::placeholder{
+  --font-size:10px
+
+}
+
+ion-button.btn-login{
+  width: 350px;
+  height: 48px;
+  font-weight: 400;
+  --color: #ffffff;
+  --background: #9189F1;
+  --box-shadow: none;
+  --border-radius: 10px;
+
+}
+
+ion-button.btn-join{
+  color: #9189F1;
+  width: 350px;
+  height: 48px;
+  font-weight: 800;
+  --box-shadow: none;
+  --border-color: #9189F1;
+  --border-radius: 10px;
+
+}
+
+.login:hover, .login:active{
+  --color: #bdbdbd;
+  --background-color: #ffffff;
+  --background-hover: transparent; /* 기본 hover 배경 투명 */
+}
+

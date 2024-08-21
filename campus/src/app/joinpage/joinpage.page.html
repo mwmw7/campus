@@ -1,13 +1,37 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>joinpage</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <div class="content-inner">
+    <img src="../../assets/svg/HIP-Logo.svg" alt="logo">
+    <div style="display: flex; flex-direction: row; justify-content: center; align-content: center">
+      <div style="margin-bottom: 20px; color: #1c1c1c; font-size: 13px; font-weight: 400">이미 회원이신가요?<button style="color: #6d62fd; font-weight: 900; background-color: white; margin: 10px">로그인하기</button></div>
+    </div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">joinpage</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <div>
+      <div class="title-login">아이디</div>
+      <div class="input-login">
+        <ion-input color="none" placeholder="아이디 입력"></ion-input>
+      </div>
+
+      <div class="title-login">비밀번호</div>
+      <div class="input-login">
+        <ion-input type="password" color="none" placeholder="비밀번호"></ion-input>
+      </div>
+
+      <div class="title-login">비밀번호 확인</div>
+      <div class="input-login">
+        <ion-input type="password" color="none" placeholder="비밀번호 확인"></ion-input>
+      </div>
+
+      <div class="title-login">닉네임</div>
+      <div class="input-login">
+        <ion-input color="none" placeholder="닉네임 입력"></ion-input>
+      </div>
+
+      <div class="title-login">이메일</div>
+      <div class="input-login">
+        <ion-input type="email" color="none" placeholder="이메일" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required></ion-input>
+      </div>
+      <div style="height: 15px;"></div>
+    </div>
+    <ion-button class="btn-login">가입하기</ion-button>
+  </div>
 </ion-content>
