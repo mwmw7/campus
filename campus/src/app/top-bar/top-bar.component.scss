@@ -1,3 +1,7 @@
+@import "../../global.scss";
+button{
+  cursor: pointer;
+}
 
 
 ion-menu-button {
@@ -72,7 +76,6 @@ ion-searchbar.title-searchbar{
 
 ion-button.login{
   --color: #000000;
-  --padding:10px;
 }
 
 .login:hover, .login:active{
@@ -81,6 +84,11 @@ ion-button.login{
   --background-hover: transparent; /* 기본 hover 배경 투명 */
 }
 
+//메뉴
+.secondpageBtn{
+  background-color: white;
+  cursor: pointer;
+}
 
 
 
@@ -129,6 +137,14 @@ ion-label:hover{
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
+}
+
+//회원가입
+
+ion-modal{
+  --border-radius: 22px;
+  --box-shadow: none;
 
 }
 

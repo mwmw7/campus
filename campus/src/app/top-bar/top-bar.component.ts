@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import { IonicModule } from '@ionic/angular';
-import {RouterLink, RouterLinkActive} from "@angular/router";
+import {Router, RouterLink, RouterLinkActive} from "@angular/router";
 import {NgForOf} from "@angular/common";
 import { ModalController } from '@ionic/angular';
 import { JoinModalPage } from '../join-modal/join-modal.page';
@@ -30,7 +30,8 @@ export class TopBarComponent implements OnInit {
   ];
 
   constructor(private modalController: ModalController,
-              private authService: AuthService) {
+              private authService: AuthService,
+              ) {
 
   }
 
@@ -45,11 +46,12 @@ export class TopBarComponent implements OnInit {
     this.authService.logout_current();
   }
 
-  async openModal() {
-    const modal = await this.modalController.create({
-      component: JoinModalPage,
-      cssClass: 'custom-modal'
-    });
-    return await modal.present();
-  }
+  // async openModal() {
+  //   const modal = await this.modalController.create({
+  //     component: JoinModalPage,
+  //     cssClass: 'custom-modal'
+  //   });
+  //   return await modal.present();
+  // }
+
 }

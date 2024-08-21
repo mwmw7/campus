@@ -7,26 +7,31 @@
           <h6>Hongik University Intelligent Platform</h6>
         </ion-text>
       </ion-button>
-      <ion-item *ngFor="let p of TopPages"
-                [routerLink]="[p.url]"
-                routerDirection="root"
-                lines="none"
-                detail="false"
-                routerLinkActive="selected">
-        <ion-label class="title-text">{{ p.title }}</ion-label>
-      </ion-item>
+      <ng-container *ngIf="!isLoggedIn">
+        <ion-button routerLink="/secondpage" routerDirection="root" fill="clear">
+          <ion-label>전시관</ion-label>
+        </ion-button>
+      </ng-container>
+      <ng-container *ngIf="isLoggedIn">
+        <ion-button routerLink="/secondpage" routerDirection="root" fill="clear">
+          <ion-label>전시관</ion-label>
+        </ion-button>
+        <ion-button routerLink="/thirdpage" routerDirection="root" fill="clear">
+          <ion-label>학습룸</ion-label>
+        </ion-button>
+      </ng-container>
     </div>
     <ion-searchbar class="title-searchbar" placeholder=""></ion-searchbar>
     <div class="menu-right">
-      <ng-container *ngIf="!isLoggedIn; else loggedInMenu">
-        <ion-button routerLink="/loginpage" class="login" fill="clear">
+      <ng-container *ngIf="!isLoggedIn">
+        <ion-button size="small" routerLink="/loginpage" class="login" fill="clear">
           <ion-label class="login-text">로그인</ion-label>
         </ion-button>
-        <ion-button (click)="openModal()" class="login" fill="clear">
+        <ion-button size="small" id="open-modal" class="login" fill="clear">
           <ion-label class="login-text">회원가입</ion-label>
         </ion-button>
       </ng-container>
-      <ng-template #loggedInMenu>
+      <ng-container *ngIf="isLoggedIn">
         <ion-button class="login" fill="clear">
           <ion-icon name="person"></ion-icon>
           <ion-label class="login-text">회원 아이콘</ion-label>
@@ -34,7 +39,58 @@
         <ion-button (click)="logout()" class="login" fill="clear">
           <ion-label class="login-text">로그아웃하기</ion-label>
         </ion-button>
-      </ng-template>
+      </ng-container>
     </div>
   </div>
 </ion-toolbar>
+
+<ion-modal #modal trigger="open-modal">
+  <ng-template>
+    <ion-content>
+      <ion-toolbar>
+        <ion-title>Modal</ion-title>
+        <ion-buttons slot="end">
+          <ion-button color="light" (click)="modal.dismiss()">Close</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+      <ion-list>
+        <ion-item>
+          <ion-avatar slot="start">
+            <ion-img src="https://i.pravatar.cc/300?u=b"></ion-img>
+          </ion-avatar>
+          <ion-label>
+            <h2>Connor Smith</h2>
+            <p>Sales Rep</p>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-avatar slot="start">
+            <ion-img src="https://i.pravatar.cc/300?u=a"></ion-img>
+          </ion-avatar>
+          <ion-label>
+            <h2>Daniel Smith</h2>
+            <p>Product Designer</p>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-avatar slot="start">
+            <ion-img src="https://i.pravatar.cc/300?u=d"></ion-img>
+          </ion-avatar>
+          <ion-label>
+            <h2>Greg Smith</h2>
+            <p>Director of Operations</p>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-avatar slot="start">
+            <ion-img src="https://i.pravatar.cc/300?u=e"></ion-img>
+          </ion-avatar>
+          <ion-label>
+            <h2>Zoey Smith</h2>
+            <p>CEO</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ng-template>
+</ion-modal>
