@@ -1,7 +1,13 @@
-@import "../../assets/font/variables";
+@import "../../global";
 
 button{
   cursor:pointer;
+}
+
+ion-input{
+  &::placeholder{
+    font-family: 'pretendard-R', sans-serif;
+  }
 }
 
 //지역범위의 css
@@ -24,22 +30,22 @@ button{
   padding: 15px;
 
   width: 350px;
-  margin : 10px 0;
   height: 50px;
+  margin-bottom: 20px;
+  margin-top:5px;
+
 }
+
+
 
 .title-login{
   font-size: 14px;
+  font-family: 'pretendard-B', serif;
 }
 
-
-
-.input-login::placeholder{
-  --font-size:10px
-
-}
 
 .btn-login{
+  font-family: 'pretendard-B', serif; // 폰트 이름
   width: 350px;
   height: 48px;
   font-weight: 400;
