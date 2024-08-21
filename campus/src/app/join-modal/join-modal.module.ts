@@ -8,6 +8,7 @@ import { JoinModalPageRoutingModule } from './join-modal-routing.module';
 
 import { JoinModalPage } from './join-modal.page';
 
+
 @NgModule({
   imports: [
     CommonModule,

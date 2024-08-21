@@ -1,13 +1,11 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>join-modal</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">join-modal</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="modal-content">
+  <div>
+    <button (click)="dismissModal()">
+      <img id="close" src="../../assets/svg/close.svg" alt="close">
+    </button>
+  </div>
+    <div class="content-inner">
+      <img src="../../assets/svg/HIP-Logo.svg" alt="logo">
+      <div style="margin-bottom:20px; color: #6d62fd; font-size:13px; font-weight: bold">당신의 미래를 응원합니다.</div>
+    </div>
 </ion-content>

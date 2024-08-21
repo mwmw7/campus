@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-join-modal',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JoinModalPage implements OnInit {
 
-  constructor() { }
+  constructor(private modalController: ModalController) { }
+
+  dismissModal() {
+    this.modalController.dismiss();
+  }
 
   ngOnInit() {
   }

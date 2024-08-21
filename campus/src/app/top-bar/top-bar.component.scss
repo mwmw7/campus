@@ -133,6 +133,32 @@ ion-label:hover{
 }
 
 
+.custom-modal {
+  --width: 80%;
+  --height: 60%;
+  --max-width: 500px;
+  --border-radius: 20px;
+  --background: #ffffff;
+  //--box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.custom-modal .modal-wrapper {
+  height: var(--height);
+  width: var(--width);
+  max-width: var(--max-width);
+  border-radius: var(--border-radius);
+  background: var(--background);
+  //box-shadow: var(--box-shadow);
+}
+
+.custom-modal ion-content {
+  --background: #f0f0f0;
+  border-radius: 20px;
+  padding: 16px;
+}
+
+
+
 
 
 

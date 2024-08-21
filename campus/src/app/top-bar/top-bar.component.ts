@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import {RouterLink, RouterLinkActive} from "@angular/router";
 import {NgForOf} from "@angular/common";
-import {alert} from "ionicons/icons";
+import { ModalController } from '@ionic/angular';
+import { JoinModalPage } from '../join-modal/join-modal.page';
 
 @Component({
   selector: 'app-top-bar',
@@ -22,9 +23,17 @@ export class TopBarComponent {
     { title: '학습룸', url: '/thirdpage' },
   ];
 
-  constructor() {
+  constructor(private modalController: ModalController) {
 
   }
 
   ngOnInit() {}
+
+  async openModal() {
+    const modal = await this.modalController.create({
+      component: JoinModalPage,
+      cssClass: 'custom-modal'
+    });
+    return await modal.present();
+  }
 }
