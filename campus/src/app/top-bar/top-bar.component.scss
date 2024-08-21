@@ -1,3 +1,7 @@
+@import "../../global.scss";
+button{
+  cursor: pointer;
+}
 
 
 ion-menu-button {
@@ -72,7 +76,6 @@ ion-searchbar.title-searchbar{
 
 ion-button.login{
   --color: #000000;
-  --padding:10px;
 }
 
 .login:hover, .login:active{
@@ -81,6 +84,11 @@ ion-button.login{
   --background-hover: transparent; /* 기본 hover 배경 투명 */
 }
 
+//메뉴
+.secondpageBtn{
+  background-color: white;
+  cursor: pointer;
+}
 
 
 
@@ -132,30 +140,15 @@ ion-label:hover{
 
 }
 
+//회원가입
 
-.custom-modal {
-  --width: 80%;
-  --height: 60%;
-  --max-width: 500px;
-  --border-radius: 20px;
-  --background: #ffffff;
-  //--box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+ion-modal{
+  --border-radius: 22px;
+  --box-shadow: none;
+
 }
 
-.custom-modal .modal-wrapper {
-  height: var(--height);
-  width: var(--width);
-  max-width: var(--max-width);
-  border-radius: var(--border-radius);
-  background: var(--background);
-  //box-shadow: var(--box-shadow);
-}
 
-.custom-modal ion-content {
-  --background: #f0f0f0;
-  border-radius: 20px;
-  padding: 16px;
-}
 
 
 

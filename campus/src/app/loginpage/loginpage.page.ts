@@ -29,14 +29,26 @@ export class LoginpagePage implements OnInit {
   async onSubmit() {
     if (this.loginForm.valid) {
       try {
+        // 로그인 요청
         const response = await this.authService.login(this.loginForm.value).toPromise();
-        localStorage.setItem('token', response.token); // JWT 저장
+
+        // JWT 토큰을 로컬 스토리지에 저장
+        localStorage.setItem('token', response.token);
+
+        // 로그인 상태 업데이트
+        this.authService.login_current(response.token);
+
+        // 성공 알림
         await this.showAlert('로그인 성공', '로그인이 성공적으로 완료되었습니다.');
-        this.router.navigate(['/afterstart']);
+
+        // 메인 페이지로 이동
+        this.router.navigate(['main']);
       } catch (error) {
+        // 실패 알림
         await this.showAlert('로그인 실패', '아이디 또는 비밀번호가 틀렸습니다.');
       }
     } else {
+      // 폼 입력 오류 알림
       await this.showAlert('입력 오류', '아이디와 비밀번호를 모두 입력하세요.');
     }
   }
