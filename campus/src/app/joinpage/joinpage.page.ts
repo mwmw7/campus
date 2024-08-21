@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AlertController } from '@ionic/angular';
+import { AuthService } from '../services/auth.service';  // 생성한 서비스 임포트
 
 @Component({
   selector: 'app-joinpage',
@@ -12,10 +13,9 @@ export class JoinpagePage implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private alertController: AlertController
-  ) {}
-
-  ngOnInit() {
+    private alertController: AlertController,
+    private authService: AuthService  // 서비스 주입
+  ) {
     this.registerForm = this.fb.group({
       username: ['', Validators.required],
       password: ['', [Validators.required, Validators.minLength(6)]],
@@ -24,6 +24,8 @@ export class JoinpagePage implements OnInit {
       email: ['', [Validators.required, Validators.email]],
     }, { validators: this.passwordMatchValidator });
   }
+
+  ngOnInit() {}
 
   passwordMatchValidator(form: FormGroup) {
     return form.get('password')!.value === form.get('confirmPassword')!.value
@@ -35,7 +37,8 @@ export class JoinpagePage implements OnInit {
       const data = this.registerForm.value;
 
       try {
-        console.log('회원가입 데이터:', data);
+        const response = await this.authService.register(data).toPromise();
+        console.log('회원가입 성공:', response);
 
         const alert = await this.alertController.create({
           header: 'Success',
@@ -45,9 +48,11 @@ export class JoinpagePage implements OnInit {
         await alert.present();
         this.registerForm.reset();
       } catch (error) {
+        console.error('회원가입 실패:', error);
+
         const alert = await this.alertController.create({
           header: 'Error',
-          message: '회원가입 실패',
+          message: '회원가입 실패: ',
           buttons: ['OK'],
         });
         await alert.present();
