@@ -4,11 +4,11 @@ button{
   cursor:pointer;
 }
 
-ion-input{
-  &::placeholder{
-    font-family: 'pretendard-R', sans-serif;
-  }
+ion-input::placeholder{
+  font-size: 10px;
 }
+
+
 
 //지역범위의 css
 .content-inner{
@@ -45,7 +45,7 @@ ion-input{
 
 
 .btn-login{
-  font-family: 'pretendard-B', serif; // 폰트 이름
+  font-family: 'pretendard-B', serif;
   width: 350px;
   height: 48px;
   font-weight: 400;
