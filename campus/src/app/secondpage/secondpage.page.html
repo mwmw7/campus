@@ -35,6 +35,15 @@
       </div>
     </div>
 
-    <div class="section section2">섹션 2</div>
+    <div class="section section2">
+      <ng-container *ngFor="let card of cards">
+        <app-card
+          [title]="card.title"
+          [teamname]="card.teamname"
+          [content]="card.content"
+          [image]="card.image">
+        </app-card>
+      </ng-container>
+    </div>
   </div>
 </ion-content>
