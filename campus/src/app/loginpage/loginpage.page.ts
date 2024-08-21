@@ -32,7 +32,7 @@ export class LoginpagePage implements OnInit {
         const response = await this.authService.login(this.loginForm.value).toPromise();
         localStorage.setItem('token', response.token); // JWT 저장
         await this.showAlert('로그인 성공', '로그인이 성공적으로 완료되었습니다.');
-        this.router.navigate(['/afterstart']);
+        this.router.navigate(['main']);
       } catch (error) {
         await this.showAlert('로그인 실패', '아이디 또는 비밀번호가 틀렸습니다.');
       }

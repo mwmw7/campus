@@ -1,6 +1,6 @@
 <ion-content>
-  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <div class="content-inner">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <img src="../../assets/svg/HIP-Logo.svg" alt="logo">
       <div style="margin-bottom:20px; color: #6d62fd; font-size:13px; font-weight: bold">
         당신의 미래를 응원합니다.
@@ -23,6 +23,6 @@
       <ion-button expand="full" type="submit" class="btn-login" [disabled]="loginForm.invalid">로그인하기</ion-button>
       <ion-button expand="full" routerLink="/joinpage" class="btn-join" fill="outline">회원가입</ion-button>
       <button routerLink="/main" style="color: #373737; background-color: white; margin: 10px; font-size:12px">홈으로 가기</button>
+      </form>
     </div>
-  </form>
 </ion-content>

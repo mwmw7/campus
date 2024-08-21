@@ -13,7 +13,8 @@ ion-input::placeholder{
 //지역범위의 css
 .content-inner{
   width: 100%;
-  height: 100%;
+  height: auto;
+  margin:100px 0;
   display: flex;
   justify-content: center;
   align-items: center;
