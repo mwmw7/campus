@@ -10,6 +10,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { SidemenuComponent } from './sidemenucomponent/sidemenu.component';
 import {TopBarComponent} from "./top-bar/top-bar.component";
 import {HttpClientModule} from "@angular/common/http";
+import { CommonModule } from '@angular/common';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,7 +20,9 @@ import {HttpClientModule} from "@angular/common/http";
       HttpClientModule,
       AppRoutingModule,
       TopBarComponent,
-      SidemenuComponent],
+      SidemenuComponent,
+      CommonModule,
+    ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

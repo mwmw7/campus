@@ -1,28 +1,26 @@
 <ion-content>
-    <div class="content-inner">
-      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-      <img src="../../assets/svg/HIP-Logo.svg" alt="logo">
-      <div style="margin-bottom:20px; color: #6d62fd; font-size:13px; font-weight: bold">
-        당신의 미래를 응원합니다.
-      </div>
-
-      <div>
-        <div class="input-login">
-          <ion-icon style="color:#9B9B9B; width: 20px; margin-right: 10px;" name="person"></ion-icon>
-          <ion-input formControlName="username" color="none" placeholder="아이디"></ion-input>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="content-inner">
+        <img src="../../assets/svg/HIP-Logo.svg" alt="logo">
+        <div style="margin-bottom:20px; color: #6d62fd; font-size:13px; font-weight: bold">
+          당신의 미래를 응원합니다.
         </div>
 
-        <div class="input-login">
-          <ion-icon style="color:#9B9B9B; width: 20px; margin-right: 10px;" name="lock-closed"></ion-icon>
-          <ion-input type="password" formControlName="password" color="none" placeholder="비밀번호"></ion-input>
+        <div>
+          <div class="input-login">
+            <ion-icon style="color:#9B9B9B; width: 20px; margin-right: 10px;" name="person"></ion-icon>
+            <ion-input formControlName="username" color="none" placeholder="아이디"></ion-input>
+          </div>
+
+          <div class="input-login">
+            <ion-icon style="color:#9B9B9B; width: 20px; margin-right: 10px;" name="lock-closed"></ion-icon>
+            <ion-input type="password" formControlName="password" color="none" placeholder="비밀번호"></ion-input>
+          </div>
+
+          <div style="height: 15px;"></div>
         </div>
 
-        <div style="height: 15px;"></div>
-      </div>
-
-      <ion-button expand="full" type="submit" class="btn-login" [disabled]="loginForm.invalid">로그인하기</ion-button>
-      <ion-button expand="full" routerLink="/joinpage" class="btn-join" fill="outline">회원가입</ion-button>
-      <button routerLink="/main" style="color: #373737; background-color: white; margin: 10px; font-size:12px">홈으로 가기</button>
+        <ion-button class="btn-login" type="submit" [disabled]="loginForm.invalid">로그인하기</ion-button>
+        <ion-button routerLink="/joinpage" class="btn-join" fill="outline">회원가입</ion-button>
+        <button routerLink="/main" style="color: #373737; background-color: white; margin: 10px; font-size:12px">홈으로 가기</button>
       </form>
-    </div>
 </ion-content>

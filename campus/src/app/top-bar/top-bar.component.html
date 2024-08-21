@@ -1,30 +1,40 @@
 <ion-toolbar>
-    <div id="inner">
-      <div class="menu-left">
-        <ion-button routerLink="/main" id="button-logo" fill="clear">
-          <img src="../../assets/svg/HIP-Logo.svg" id="logo" alt="Logo">
-          <ion-text id="logo-text">
-            <h6>Hongik University Intelligent Platform</h6>
-          </ion-text>
-        </ion-button>
-        <ion-item *ngFor="let p of TopPages"
-                  [routerLink]="[p.url]"
-                  routerDirection="root"
-                  lines="none"
-                  detail="false"
-                  routerLinkActive="selected">
-          <ion-label class="title-text">{{ p.title }}</ion-label>
-        </ion-item>
-      </div>
-        <ion-searchbar class="title-searchbar" placeholder=""></ion-searchbar>
-      <div class="menu-right">
-        <ion-button  routerLink="/loginpage" class="login" fill="clear">
-          <ion-label class="login-text" >로그인</ion-label>
+  <div id="inner">
+    <div class="menu-left">
+      <ion-button routerLink="/main" id="button-logo" fill="clear">
+        <img src="../../assets/svg/HIP-Logo.svg" id="logo" alt="Logo">
+        <ion-text id="logo-text">
+          <h6>Hongik University Intelligent Platform</h6>
+        </ion-text>
+      </ion-button>
+      <ion-item *ngFor="let p of TopPages"
+                [routerLink]="[p.url]"
+                routerDirection="root"
+                lines="none"
+                detail="false"
+                routerLinkActive="selected">
+        <ion-label class="title-text">{{ p.title }}</ion-label>
+      </ion-item>
+    </div>
+    <ion-searchbar class="title-searchbar" placeholder=""></ion-searchbar>
+    <div class="menu-right">
+      <ng-container *ngIf="!isLoggedIn; else loggedInMenu">
+        <ion-button routerLink="/loginpage" class="login" fill="clear">
+          <ion-label class="login-text">로그인</ion-label>
         </ion-button>
         <ion-button (click)="openModal()" class="login" fill="clear">
           <ion-label class="login-text">회원가입</ion-label>
         </ion-button>
-      </div>
+      </ng-container>
+      <ng-template #loggedInMenu>
+        <ion-button class="login" fill="clear">
+          <ion-icon name="person"></ion-icon>
+          <ion-label class="login-text">회원 아이콘</ion-label>
+        </ion-button>
+        <ion-button (click)="logout()" class="login" fill="clear">
+          <ion-label class="login-text">로그아웃하기</ion-label>
+        </ion-button>
+      </ng-template>
     </div>
-  </ion-toolbar>
-
+  </div>
+</ion-toolbar>
