@@ -44,53 +44,33 @@
   </div>
 </ion-toolbar>
 
+
 <ion-modal #modal trigger="open-modal">
   <ng-template>
-    <ion-content>
-      <ion-toolbar>
-        <ion-title>Modal</ion-title>
-        <ion-buttons slot="end">
-          <ion-button color="light" (click)="modal.dismiss()">Close</ion-button>
-        </ion-buttons>
+    <ion-content class="modal-content">
+      <ion-toolbar class="modal-toolbar">
+        <div>
+          <button class="close-btn" (click)="modal.dismiss()">
+            <img id="close" src="../../assets/svg/close.svg" alt="close">
+          </button>
+        </div>
+        <div class="toolbar-content">
+          <ion-title class="join-title">회원가입</ion-title>
+          <div class="join-Big-title">메타의 품격</div>
+          <img style="margin: 15px;" src="../../assets/svg/HIP-Logo.svg">
+          <div style="font-size: 14px">당신은 어떤 사람인가요?</div>
+          <div class="user-rule">
+            <button class="user-rule-btn">
+              <div class="user-rule-title">학생</div>
+              <div>학생으로 가입하기</div>
+            </button>
+            <button class="user-rule-btn">
+              <div class="user-rule-title">강사</div>
+              <div>강사로 가입하기</div>
+            </button>
+          </div>
+        </div>
       </ion-toolbar>
-      <ion-list>
-        <ion-item>
-          <ion-avatar slot="start">
-            <ion-img src="https://i.pravatar.cc/300?u=b"></ion-img>
-          </ion-avatar>
-          <ion-label>
-            <h2>Connor Smith</h2>
-            <p>Sales Rep</p>
-          </ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-avatar slot="start">
-            <ion-img src="https://i.pravatar.cc/300?u=a"></ion-img>
-          </ion-avatar>
-          <ion-label>
-            <h2>Daniel Smith</h2>
-            <p>Product Designer</p>
-          </ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-avatar slot="start">
-            <ion-img src="https://i.pravatar.cc/300?u=d"></ion-img>
-          </ion-avatar>
-          <ion-label>
-            <h2>Greg Smith</h2>
-            <p>Director of Operations</p>
-          </ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-avatar slot="start">
-            <ion-img src="https://i.pravatar.cc/300?u=e"></ion-img>
-          </ion-avatar>
-          <ion-label>
-            <h2>Zoey Smith</h2>
-            <p>CEO</p>
-          </ion-label>
-        </ion-item>
-      </ion-list>
     </ion-content>
   </ng-template>
 </ion-modal>
