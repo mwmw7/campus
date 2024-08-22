@@ -38,15 +38,11 @@ const routes: Routes = [
   {
     path: 'loginpage',
     loadChildren: () => import('./loginpage/loginpage.module').then( m => m.LoginpagePageModule)
-  },  {
+  },
+  {
     path: 'joinpage',
     loadChildren: () => import('./joinpage/joinpage.module').then( m => m.JoinpagePageModule)
   },
-  {
-    path: 'join-modal',
-    loadChildren: () => import('./join-modal/join-modal.module').then( m => m.JoinModalPageModule)
-  },
-
 
 
 

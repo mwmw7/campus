@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AlertController } from '@ionic/angular';
-import { AuthService } from '../services/auth.service';  // 생성한 서비스 임포트
+import { AlertController, ModalController } from '@ionic/angular';
+import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-joinpage',
@@ -10,16 +11,20 @@ import { AuthService } from '../services/auth.service';  // 생성한 서비스 
 })
 export class JoinpagePage implements OnInit {
   registerForm!: FormGroup;
+  userRole: string | null = null; // 모달에서 전달된 사용자 역할을 저장할 변수
 
   constructor(
     private fb: FormBuilder,
     private alertController: AlertController,
-    private authService: AuthService  // 서비스 주입
+    private authService: AuthService,
+    private router: Router,
+    private modalController: ModalController
   ) {
+    // 회원가입 폼 초기화
     this.registerForm = this.fb.group({
       user_name: ['', Validators.required],
       nick_name: ['', Validators.required],
-      user_role: ['', Validators.required],
+      user_role: ['', Validators.required], // 사용자 역할 필드
       id: ['', Validators.required],
       password: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -27,12 +32,13 @@ export class JoinpagePage implements OnInit {
     });
   }
 
-  ngOnInit() {}
-
-  // passwordMatchValidator(form: FormGroup) {
-  //   return form.get('password')!.value === form.get('confirmPassword')!.value
-  //     ? null : { mismatch: true };
-  // }
+  ngOnInit() {
+    // 라우터에서 전달된 user_role 값을 설정
+    this.userRole = history.state.user_role;
+    if (this.userRole) {
+      this.registerForm.patchValue({ user_role: this.userRole });
+    }
+  }
 
   async onSubmit() {
     if (this.registerForm.valid) {
@@ -49,6 +55,7 @@ export class JoinpagePage implements OnInit {
         });
         await alert.present();
         this.registerForm.reset();
+        this.router.navigate(['/main']); // 회원가입 후 메인 페이지로 이동
       } catch (error) {
         console.error('회원가입 실패:', error);
 
@@ -60,5 +67,10 @@ export class JoinpagePage implements OnInit {
         await alert.present();
       }
     }
+  }
+
+  logout() {
+    // 로그아웃 로직
+    console.log('로그아웃되었습니다.');
   }
 }

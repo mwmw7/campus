@@ -219,10 +219,11 @@ ion-modal{
   width: 300px;
   height: 200px;
 
-  background-color: #976BEE;
+  background-color: #ffffff;
   justify-content: center;
   align-items: center;
   border-radius: 22px;
+  border: 1.5px solid #AAAAAA;
 
   display: flex;
   flex-direction: column;
@@ -236,7 +237,7 @@ button{
 }
 
 .user-rule-title{
-  margin: 10px;
+  margin: 5px;
   font-size: 20px;
   font-family: pretendard-B, serif;
 

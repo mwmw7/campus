@@ -3,10 +3,9 @@ import { IonicModule } from '@ionic/angular';
 import {Router, RouterLink, RouterLinkActive} from "@angular/router";
 import {NgForOf} from "@angular/common";
 import { ModalController } from '@ionic/angular';
-import { JoinModalPage } from '../join-modal/join-modal.page';
 import { AuthService } from '../services/auth.service';
-import { CommonModule } from '@angular/common'; // CommonModule 임포트
-
+import { CommonModule } from '@angular/common';
+import {ReactiveFormsModule} from "@angular/forms"; // CommonModule 임포트
 
 @Component({
   selector: 'app-top-bar',
@@ -18,6 +17,7 @@ import { CommonModule } from '@angular/common'; // CommonModule 임포트
     NgForOf,
     RouterLinkActive,
     CommonModule,
+    ReactiveFormsModule,
   ],
   standalone: true
 })
@@ -31,6 +31,7 @@ export class TopBarComponent implements OnInit {
 
   constructor(private modalController: ModalController,
               private authService: AuthService,
+              private router: Router,
               ) {
 
   }
@@ -46,12 +47,10 @@ export class TopBarComponent implements OnInit {
     this.authService.logout_current();
   }
 
-  // async openModal() {
-  //   const modal = await this.modalController.create({
-  //     component: JoinModalPage,
-  //     cssClass: 'custom-modal'
-  //   });
-  //   return await modal.present();
-  // }
+  async selectRole(role: string) {
+    // 모달을 닫고, user_role을 Joinpage로 전달
+    await this.modalController.dismiss();
+    await this.router.navigate(['/joinpage'], {state: {user_role: role}});
+  }
 
 }
