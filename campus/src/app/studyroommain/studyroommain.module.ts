@@ -4,9 +4,10 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { StudyroommainPageRoutingModule } from './studyroomMain-routing.module';
+import { StudyroommainPageRoutingModule } from './studyroommain-routing.module';
 
 import { StudyroommainPage } from './studyroomMain.page';
+import {StudyroomSideBarComponent} from "../studyroom-side-bar/studyroom-side-bar.component";
 
 @NgModule({
   imports: [
@@ -15,6 +16,11 @@ import { StudyroommainPage } from './studyroomMain.page';
     IonicModule,
     StudyroommainPageRoutingModule
   ],
-  declarations: [StudyroommainPage]
+  exports: [
+    StudyroomSideBarComponent
+  ],
+  declarations: [StudyroommainPage, StudyroomSideBarComponent]
+
 })
-export class StudyroommainPageModule {}
+export class StudyroommainPageModule {
+}

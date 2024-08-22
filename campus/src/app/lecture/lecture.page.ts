@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-lecture',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LecturePage implements OnInit {
 
-  constructor() { }
+    public folder!: string;
+    private activatedRoute = inject(ActivatedRoute);
+    constructor() {}
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+        this.folder = this.activatedRoute.snapshot.paramMap.get('id') as string;
+    }
 
 }
