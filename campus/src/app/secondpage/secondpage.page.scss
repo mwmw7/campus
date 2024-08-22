@@ -92,6 +92,7 @@ ion-checkbox::part(container) {
   height: 100%;
   margin-top: 50px;
   font-weight: 550;
+  max-width: 210px;
 }
 
 .section1 .classycontent .clssfy{
@@ -105,10 +106,11 @@ ion-checkbox::part(container) {
 
 .section1 .classycontent .clssfy .currycu{
   margin-left: 20px;
+  margin-right: 60px;
 }
 
 .section1 .classycontent .clssfy .reset{
-  margin-left: 30px;
+  margin-right: revert;
   font-size: 13px;
   color: #B0B0B0;
 }
@@ -127,7 +129,7 @@ ion-checkbox::part(container) {
 }
 
 .classnamebox{
-margin-top: 25px;
+  margin-top: 25px;
 }
 
 
@@ -136,8 +138,10 @@ margin-top: 25px;
   flex: 5;
   padding: 10px; /* 내용물과 경계 간격 */
   background-color: white ;
-  position: relative;
   border-top-right-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 
 }
 
@@ -167,8 +171,20 @@ margin-top: 25px;
   }
 }
 
-.container {
-  position: relative; /* 상위 요소를 상대 위치로 설정 */
+.cardcontainer {
+  display: flex; /* Flexbox 활성화 */
+  flex-wrap: wrap; /* 카드가 공간에 맞춰 줄바꿈되도록 설정 */
+  justify-content: flex-start; /* 왼쪽 정렬 */
+  flex-direction: row; /* 세로 방향으로 정렬 */
 }
+
+app-card {
+  display: flex; /* Flexbox 활성화 */
+  width: calc(25% - 20px); /* 한 줄에 4개가 들어가도록 너비 설정 (간격을 고려하여 20px 감소) */
+  aspect-ratio: 16 / 9;
+  margin: 30px 10px 10px 10px; /* 카드 간 간격을 위한 마진 추가 */
+  box-sizing: border-box; /* 패딩과 테두리를 포함하여 너비 계산 */
+}
+
 
 

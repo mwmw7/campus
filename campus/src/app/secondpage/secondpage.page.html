@@ -37,7 +37,7 @@
     </div>
 
     <div class="section2">
-<!--   정렬 기능-->
+      <!--   정렬 기능-->
       <ion-accordion-group class = "sortgroup">
         <ion-accordion [value]="isOpen ? 'first' : ''">
           <ion-item slot="header" class="custom">
@@ -59,11 +59,11 @@
 
       <!--      카드-->
       <ng-container *ngFor="let card of cards" class="cardcontainer">
-        <app-card
-          [title]="card.title"
-          [teamname]="card.teamname"
-          [content]="card.content"
-          [image]="card.image">
+        <app-card class="card"
+                  [title]="card.title"
+                  [teamname]="card.teamname"
+                  [content]="card.content"
+                  [image]="card.image">
         </app-card>
       </ng-container>
     </div>
