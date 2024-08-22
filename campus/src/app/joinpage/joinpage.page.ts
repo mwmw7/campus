@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AlertController, ModalController } from '@ionic/angular';
+import { AlertController } from '@ionic/angular';
 import { AuthService } from '../services/auth.service';
-import { Router } from '@angular/router';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-joinpage',
@@ -11,33 +11,29 @@ import { Router } from '@angular/router';
 })
 export class JoinpagePage implements OnInit {
   registerForm!: FormGroup;
-  userRole: string | null = null; // 모달에서 전달된 사용자 역할을 저장할 변수
+  userRole: string | undefined;
 
   constructor(
     private fb: FormBuilder,
     private alertController: AlertController,
     private authService: AuthService,
     private router: Router,
-    private modalController: ModalController
-  ) {
-    // 회원가입 폼 초기화
+  ) {}
+
+  ngOnInit() {
+    // 모달에서 전달된 user_role 값 설정
+    this.userRole = this.router.getCurrentNavigation()?.extras.state?.['user_role'];
+
+    // 폼 초기화
     this.registerForm = this.fb.group({
       user_name: ['', Validators.required],
       nick_name: ['', Validators.required],
-      user_role: ['', Validators.required], // 사용자 역할 필드
+      user_role: [this.userRole || '', Validators.required], // 전달된 값 또는 빈 문자열로 초기화
       id: ['', Validators.required],
       password: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       generation: ['', Validators.required]
     });
-  }
-
-  ngOnInit() {
-    // 라우터에서 전달된 user_role 값을 설정
-    this.userRole = history.state.user_role;
-    if (this.userRole) {
-      this.registerForm.patchValue({ user_role: this.userRole });
-    }
   }
 
   async onSubmit() {
@@ -54,8 +50,12 @@ export class JoinpagePage implements OnInit {
           buttons: ['OK'],
         });
         await alert.present();
+
+        // 회원가입 후 폼 초기화
         this.registerForm.reset();
-        this.router.navigate(['/main']); // 회원가입 후 메인 페이지로 이동
+
+        // 회원가입 성공 후 페이지 이동 (로그인 페이지나 메인 페이지로)
+        await this.router.navigate(['/loginpage']); // 예시로 로그인 페이지로 이동
       } catch (error) {
         console.error('회원가입 실패:', error);
 
@@ -67,10 +67,5 @@ export class JoinpagePage implements OnInit {
         await alert.present();
       }
     }
-  }
-
-  logout() {
-    // 로그아웃 로직
-    console.log('로그아웃되었습니다.');
   }
 }

@@ -59,13 +59,13 @@
           <div class="join-Big-title">메타의 품격</div>
           <img style="margin: 15px;" src="../../assets/svg/HIP-Logo.svg">
           <div style="font-size: 14px">당신은 어떤 사람인가요?</div>
-          <div formControlName="user_role" class="user-rule">
-            <button value="student" class="user-rule-btn">
+          <div class="user-rule">
+            <button (click)="setUserRole('student')" class="user-rule-btn">
               <img src="../../assets/svg/Instruc-icon.svg">
               <div class="user-rule-title">학생</div>
               <div>학생으로 가입하기</div>
             </button>
-            <button routerLink="/joinpage" routerDirection="root" value="instructor" class="user-rule-btn" (click)="modal.dismiss()">
+            <button (click)="setUserRole('instructor')" class="user-rule-btn">
               <img src="../../assets/svg/student-icon.svg">
               <div class="user-rule-title">강사</div>
               <div>강사로 가입하기</div>

@@ -1,11 +1,11 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
-import {Router, RouterLink, RouterLinkActive} from "@angular/router";
-import {NgForOf} from "@angular/common";
+import { Router, RouterLink, RouterLinkActive } from "@angular/router";
+import { NgForOf } from "@angular/common";
 import { ModalController } from '@ionic/angular';
 import { AuthService } from '../services/auth.service';
 import { CommonModule } from '@angular/common';
-import {ReactiveFormsModule} from "@angular/forms"; // CommonModule 임포트
+import { ReactiveFormsModule } from "@angular/forms";
 
 @Component({
   selector: 'app-top-bar',
@@ -23,18 +23,18 @@ import {ReactiveFormsModule} from "@angular/forms"; // CommonModule 임포트
 })
 export class TopBarComponent implements OnInit {
   isLoggedIn = false;
+  userRole: string | undefined;
 
   public TopPages = [
     { title: '전시관', url: '/secondpage' },
     { title: '학습룸', url: '/thirdpage' },
   ];
 
-  constructor(private modalController: ModalController,
-              private authService: AuthService,
-              private router: Router,
-              ) {
-
-  }
+  constructor(
+    private modalController: ModalController,
+    private authService: AuthService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
     this.authService.isLoggedIn.subscribe(status => {
@@ -47,10 +47,15 @@ export class TopBarComponent implements OnInit {
     this.authService.logout_current();
   }
 
-  async selectRole(role: string) {
-    // 모달을 닫고, user_role을 Joinpage로 전달
-    await this.modalController.dismiss();
-    await this.router.navigate(['/joinpage'], {state: {user_role: role}});
+  setUserRole(role: string) {
+    this.userRole = role;
+    this.navigateToJoinPage();
   }
 
+  async navigateToJoinPage() {
+    await this.modalController.dismiss(); // 모달 닫기
+    // joinpage로 네비게이션하면서 선택된 역할을 전달
+    await this.router.navigate(['/joinpage'], { state: { user_role: this.userRole } });
+    console.log("user_role을 받았습니다.");
+  }
 }
