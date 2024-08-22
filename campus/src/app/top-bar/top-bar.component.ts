@@ -36,6 +36,7 @@ export class TopBarComponent implements OnInit {
     private router: Router
   ) { }
 
+    //로그인 상태
   ngOnInit() {
     this.authService.isLoggedIn.subscribe(status => {
       console.log('로그인 상태:', status);
@@ -43,15 +44,21 @@ export class TopBarComponent implements OnInit {
     });
   }
 
+
+  //로그아웃
   logout() {
     this.authService.logout_current();
   }
 
+
+  //모달 유저 전달
   setUserRole(role: string) {
     this.userRole = role;
     this.navigateToJoinPage();
   }
 
+
+  //모달에서 joinpage로 이동
   async navigateToJoinPage() {
     await this.modalController.dismiss(); // 모달 닫기
     // joinpage로 네비게이션하면서 선택된 역할을 전달
