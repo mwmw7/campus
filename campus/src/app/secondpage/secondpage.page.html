@@ -23,7 +23,7 @@
     <div class="section section1">
       <div class ="classycontent"><ion-icon name="search" ></ion-icon> 프로젝트 탐색
         <div class ="clssfy">
-          <span class="currycu">교욱과정</span><span class="reset">초기화<ion-icon name="reload-outline" class="reseticon"></ion-icon></span>
+          <span class="currycu">교육과정</span><span class="reset">초기화<ion-icon name="reload-outline" class="reseticon"></ion-icon></span>
           <div class="classnamebox">
             <div class="classname">
               <ion-checkbox labelPlacement="end">웹 개발반</ion-checkbox>
@@ -39,7 +39,7 @@
     <div class="section2">
       <!--   정렬 기능-->
       <ion-accordion-group class = "sortgroup">
-        <ion-accordion [value]="isOpen ? 'first' : ''">
+        <ion-accordion class="sorthead" [value]="isOpen ? 'first' : ''">
           <ion-item slot="header" class="custom">
             <ion-label>{{ accordionTitle }}</ion-label>
           </ion-item>

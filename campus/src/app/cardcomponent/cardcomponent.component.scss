@@ -1,27 +1,48 @@
+
+ion-button{
+  --padding-start: 0; /* 좌측 패딩 제거 */
+  --padding-end: 0; /* 우측 패딩 제거 */
+  --padding-top: 0; /* 상단 패딩 제거 */
+  --padding-bottom: 0; /* 하단 패딩 제거 */
+  --background: transparent; /* 기본 배경색 제거 */
+  --color: inherit; /* 텍스트 색상 유지 */
+  --box-shadow: none; /* 그림자 제거 */
+
+}
+
+ion-button:active,
+ion-button:focus {
+  --background: transparent; /* 호버 시 배경색을 투명하게 설정 */
+  --box-shadow: none; /* 호버 시 그림자 제거 */
+  --color: inherit; /* 텍스트 색상 유지 */
+}
+
+
 ion-card {
-  width: 350px;       // 너비 설정
-  height: 300px;      // 높이 설정
+  aspect-ratio: 15 / 14 !important;
   overflow: hidden;   // 내용이 카드 크기를 넘지 않도록 설정
-  margin: 10px;       // 카드 간 간격을 주기 위한 마진
+  border-radius: 5px;
+  box-shadow: none; /* 기본 그림자 제거 */
+
+
 }
 
 ion-card-header {
   overflow: hidden;   // 넘치는 내용 숨기기
-  white-space: nowrap; // 한 줄로 표시
   text-overflow: ellipsis; // 넘치는 내용 생략 기호로 표시
+  text-align: left; // 왼쪽 정렬 추가
 }
 
 ion-card-title {
-  font-size: 1.2em;   // 제목 글씨 크기 조정
+  font-size: 1.8em;   // 제목 글씨 크기 조정
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis; // 넘치는 제목 생략 기호로 표시
+  font-family: 'pretendard-B', serif;
 }
 
 ion-card-subtitle {
-  font-size: 1em;     // 부제목 글씨 크기 조정
+  font-size: 1.2em;     // 부제목 글씨 크기 조정
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis; // 넘치는 부제목 생략 기호로 표시
 }
 
@@ -32,4 +53,10 @@ ion-card-content {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3; // 최대 3줄까지만 표시
   height: 60px;       // 내용 높이 제한 (필요에 따라 조정)
+}
+
+img{
+  border-radius: 5px;
+  width: 100%;
+  aspect-ratio: 16 / 9 !important;
 }
