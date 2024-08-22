@@ -151,11 +151,18 @@ ion-checkbox::part(container) {
   right: 15px; /* 왼쪽에 고정 */
   width: 115px;
   white-space: nowrap;
+  z-index: 2;
+}
+
+.sortgroup .sorthead{
+  border-radius: 10px;
+
 }
 
 .sortgroup .custom{
   font-size: 13px;
   --border-radius: 10px;
+
 }
 
 .ion-padding{
@@ -174,16 +181,36 @@ ion-checkbox::part(container) {
 .cardcontainer {
   display: flex; /* Flexbox 활성화 */
   flex-wrap: wrap; /* 카드가 공간에 맞춰 줄바꿈되도록 설정 */
-  justify-content: flex-start; /* 왼쪽 정렬 */
-  flex-direction: row; /* 세로 방향으로 정렬 */
+  margin: auto;
 }
 
 app-card {
-  display: flex; /* Flexbox 활성화 */
-  width: calc(25% - 20px); /* 한 줄에 4개가 들어가도록 너비 설정 (간격을 고려하여 20px 감소) */
-  aspect-ratio: 16 / 9;
-  margin: 30px 10px 10px 10px; /* 카드 간 간격을 위한 마진 추가 */
-  box-sizing: border-box; /* 패딩과 테두리를 포함하여 너비 계산 */
+  width: 100%; /* 기본 너비를 100%로 설정 */
+  max-width: 400px; /* 최대 너비를 300px로 설정 */
+  min-width: 200px; /* 최소 너비를 200px로 설정 */
+
+  margin: 10px; /* 카드 간 간격을 위한 마진 추가 */
+}
+
+/* 한 줄에 4개까지 들어가도록 설정 */
+@media (min-width: 1200px) {
+  app-card {
+    width: calc(25% - 20px); /* 한 줄에 4개가 들어가도록 너비 설정 */
+  }
+}
+
+/* 한 줄에 3개까지 들어가도록 설정 */
+@media (min-width: 900px) and (max-width: 1199px) {
+  app-card {
+    width: calc(33.33% - 20px); /* 한 줄에 3개가 들어가도록 너비 설정 */
+  }
+}
+
+/* 한 줄에 2개까지 들어가도록 설정 */
+@media (min-width: 600px) and (max-width: 899px) {
+  app-card {
+    width: calc(50% - 20px); /* 한 줄에 2개가 들어가도록 너비 설정 */
+  }
 }
 
 

@@ -8,6 +8,150 @@ import { Component } from '@angular/core';
 export class SecondpagePage  {
   cards = [
     {
+      title: 'Metaverse Campus제작입니다루',
+      teamname: 'HIP',
+      content: '앵식이',
+      image: "../../assets/jpg/1.jpg"
+    },
+    {
+      title: '전시 카드 제목 2',
+      teamname: '팀 이름 2',
+      content: '카드 내용 설명 3입니다.',
+      image: "../../assets/jpg/2.jpg"
+    },
+    {
+      title: '전시 카드 제목 3',
+      teamname: '팀 이름 3',
+      content: '카드 내용 설명 3입니다.',
+      image: "../../assets/jpg/3.jpg"
+    },
+    {
+      title: '전시 카드 제목 4',
+      teamname: '팀 이름 4',
+      content: '카드 내용 설명 4입니다.',
+      image: "../../assets/jpg/4.jpg"
+    },
+    {
+      title: '전시 카드 제목 1',
+      teamname: '팀 이름 1',
+      content: '카드 내용 설명 1입니다.',
+      image: "../../assets/jpg/1.jpg"
+    },
+    {
+      title: '전시 카드 제목 2',
+      teamname: '팀 이름 2',
+      content: '카드 내용 설명 3입니다.',
+      image: "../../assets/jpg/2.jpg"
+    },
+    {
+      title: '전시 카드 제목 3',
+      teamname: '팀 이름 3',
+      content: '카드 내용 설명 3입니다.',
+      image: "../../assets/jpg/3.jpg"
+    },
+    {
+      title: '전시 카드 제목 4',
+      teamname: '팀 이름 4',
+      content: '카드 내용 설명 4입니다.',
+      image: "../../assets/jpg/4.jpg"
+    },
+    {
+      title: '전시 카드 제목 1',
+      teamname: '팀 이름 1',
+      content: '카드 내용 설명 1입니다.',
+      image: "../../assets/jpg/1.jpg"
+    },
+    {
+      title: '전시 카드 제목 2',
+      teamname: '팀 이름 2',
+      content: '카드 내용 설명 3입니다.',
+      image: "../../assets/jpg/2.jpg"
+    },
+    {
+      title: '전시 카드 제목 3',
+      teamname: '팀 이름 3',
+      content: '카드 내용 설명 3입니다.',
+      image: "../../assets/jpg/3.jpg"
+    },
+    {
+      title: '전시 카드 제목 4',
+      teamname: '팀 이름 4',
+      content: '카드 내용 설명 4입니다.',
+      image: "../../assets/jpg/4.jpg"
+    },
+    {
+      title: '전시 카드 제목 1',
+      teamname: '팀 이름 1',
+      content: '카드 내용 설명 1입니다.',
+      image: "../../assets/jpg/1.jpg"
+    },
+    {
+      title: '전시 카드 제목 2',
+      teamname: '팀 이름 2',
+      content: '카드 내용 설명 3입니다.',
+      image: "../../assets/jpg/2.jpg"
+    },
+    {
+      title: '전시 카드 제목 3',
+      teamname: '팀 이름 3',
+      content: '카드 내용 설명 3입니다.',
+      image: "../../assets/jpg/3.jpg"
+    },
+    {
+      title: '전시 카드 제목 4',
+      teamname: '팀 이름 4',
+      content: '카드 내용 설명 4입니다.',
+      image: "../../assets/jpg/4.jpg"
+    },
+    {
+      title: '전시 카드 제목 1',
+      teamname: '팀 이름 1',
+      content: '카드 내용 설명 1입니다.',
+      image: "../../assets/jpg/1.jpg"
+    },
+    {
+      title: '전시 카드 제목 2',
+      teamname: '팀 이름 2',
+      content: '카드 내용 설명 3입니다.',
+      image: "../../assets/jpg/2.jpg"
+    },
+    {
+      title: '전시 카드 제목 3',
+      teamname: '팀 이름 3',
+      content: '카드 내용 설명 3입니다.',
+      image: "../../assets/jpg/3.jpg"
+    },
+    {
+      title: '전시 카드 제목 4',
+      teamname: '팀 이름 4',
+      content: '카드 내용 설명 4입니다.',
+      image: "../../assets/jpg/4.jpg"
+    },
+    {
+      title: '전시 카드 제목 1',
+      teamname: '팀 이름 1',
+      content: '카드 내용 설명 1입니다.',
+      image: "../../assets/jpg/1.jpg"
+    },
+    {
+      title: '전시 카드 제목 2',
+      teamname: '팀 이름 2',
+      content: '카드 내용 설명 3입니다.',
+      image: "../../assets/jpg/2.jpg"
+    },
+    {
+      title: '전시 카드 제목 3',
+      teamname: '팀 이름 3',
+      content: '카드 내용 설명 3입니다.',
+      image: "../../assets/jpg/3.jpg"
+    },
+    {
+      title: '전시 카드 제목 4',
+      teamname: '팀 이름 4',
+      content: '카드 내용 설명 4입니다.',
+      image: "../../assets/jpg/4.jpg"
+    },
+    {
       title: '전시 카드 제목 1',
       teamname: '팀 이름 1',
       content: '카드 내용 설명 1입니다.',
