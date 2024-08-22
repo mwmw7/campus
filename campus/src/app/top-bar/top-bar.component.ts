@@ -1,12 +1,11 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
-import {Router, RouterLink, RouterLinkActive} from "@angular/router";
-import {NgForOf} from "@angular/common";
+import { Router, RouterLink, RouterLinkActive } from "@angular/router";
+import { NgForOf } from "@angular/common";
 import { ModalController } from '@ionic/angular';
-import { JoinModalPage } from '../join-modal/join-modal.page';
 import { AuthService } from '../services/auth.service';
-import { CommonModule } from '@angular/common'; // CommonModule 임포트
-
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from "@angular/forms";
 
 @Component({
   selector: 'app-top-bar',
@@ -18,22 +17,24 @@ import { CommonModule } from '@angular/common'; // CommonModule 임포트
     NgForOf,
     RouterLinkActive,
     CommonModule,
+    ReactiveFormsModule,
   ],
   standalone: true
 })
 export class TopBarComponent implements OnInit {
   isLoggedIn = false;
+  userRole: string | undefined;
 
   public TopPages = [
     { title: '전시관', url: '/secondpage' },
     { title: '학습룸', url: '/thirdpage' },
   ];
 
-  constructor(private modalController: ModalController,
-              private authService: AuthService,
-              ) {
-
-  }
+  constructor(
+    private modalController: ModalController,
+    private authService: AuthService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
     this.authService.isLoggedIn.subscribe(status => {
@@ -46,12 +47,15 @@ export class TopBarComponent implements OnInit {
     this.authService.logout_current();
   }
 
-  // async openModal() {
-  //   const modal = await this.modalController.create({
-  //     component: JoinModalPage,
-  //     cssClass: 'custom-modal'
-  //   });
-  //   return await modal.present();
-  // }
+  setUserRole(role: string) {
+    this.userRole = role;
+    this.navigateToJoinPage();
+  }
 
+  async navigateToJoinPage() {
+    await this.modalController.dismiss(); // 모달 닫기
+    // joinpage로 네비게이션하면서 선택된 역할을 전달
+    await this.router.navigate(['/joinpage'], { state: { user_role: this.userRole } });
+    console.log("user_role을 받았습니다.");
+  }
 }
