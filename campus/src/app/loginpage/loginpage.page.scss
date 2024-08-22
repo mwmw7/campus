@@ -60,3 +60,109 @@ ion-input #icon{
   --background-hover: transparent; /* 기본 hover 배경 투명 */
 }
 
+//모달
+
+
+//모달
+
+ion-modal{
+  --border-radius: 22px;
+  --box-shadow: none;
+  --height: 490px;
+  --width: 580px;
+
+}
+
+
+.join-title{
+  font-size: 15px;
+
+}
+
+.join-Big-title{
+  font-family: "pretendard-B", serif;
+  font-size:22px;
+  color: #353B77;
+
+}
+
+.modal-toolbar {
+  padding: 30px;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.close-btn{
+  position: absolute;
+  right:20px;
+  margin-top: 10px;
+  background-color: white;
+
+}
+
+.modal-content {
+  --padding-start: 0;
+  --padding-end: 0;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.center-title {
+  text-align: center;
+  width: 100%;
+}
+
+.toolbar-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.user-rule {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+  margin-top: 20px;
+  border: dotted 2px #BFBFBF;
+  border-radius: 27px;
+
+  width: 440px;
+  height: 220px;
+  padding: 10px;
+}
+
+.user-rule-btn{
+  width: 300px;
+  height: 200px;
+
+  background-color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  border-radius: 22px;
+  border: 1.5px solid #AAAAAA;
+
+  display: flex;
+  flex-direction: column;
+
+  cursor: pointer;
+
+}
+
+button{
+  cursor: pointer;
+}
+
+.user-rule-title{
+  margin: 5px;
+  font-size: 20px;
+  font-family: pretendard-B, serif;
+
+
+}

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';  // 로그인 서비스
-import { AlertController } from '@ionic/angular';
+import {AlertController, ModalController} from '@ionic/angular';
 
 @Component({
   selector: 'app-loginpage',
@@ -11,12 +11,14 @@ import { AlertController } from '@ionic/angular';
 })
 export class LoginpagePage implements OnInit {
   loginForm!: FormGroup;
+  userRole: string | undefined;
 
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,
     private router: Router,
-    private alertController: AlertController
+    private alertController: AlertController,
+    private modalController: ModalController,
   ) {}
 
   ngOnInit() {
@@ -61,5 +63,17 @@ export class LoginpagePage implements OnInit {
     });
 
     await alert.present();
+  }
+
+  setUserRole(role: string) {
+    this.userRole = role;
+    this.navigateToJoinPage();
+  }
+
+  async navigateToJoinPage() {
+    await this.modalController.dismiss(); // 모달 닫기
+    // joinpage로 네비게이션하면서 선택된 역할을 전달
+    await this.router.navigate(['/joinpage'], { state: { user_role: this.userRole } });
+    console.log("user_role을 받았습니다.");
   }
 }
