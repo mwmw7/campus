@@ -4,6 +4,8 @@ import { SidemenuComponent } from './sidemenucomponent/sidemenu.component';
 import {TopBarComponent} from "./top-bar/top-bar.component";
 import {LecturePageModule} from "./lecture/lecture.module"; // 사이드 메뉴 컴포넌트
 
+
+
 const routes: Routes = [
   {
     path: '',

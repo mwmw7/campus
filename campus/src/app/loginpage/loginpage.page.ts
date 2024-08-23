@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';  // 로그인 서비스
 import {AlertController, ModalController} from '@ionic/angular';
+import {JoinModalComponent} from "../join-modal/join-modal.component";
 
 @Component({
   selector: 'app-loginpage',
@@ -75,5 +76,14 @@ export class LoginpagePage implements OnInit {
     // joinpage로 네비게이션하면서 선택된 역할을 전달
     await this.router.navigate(['/joinpage'], { state: { user_role: this.userRole } });
     console.log("user_role을 받았습니다.");
+  }
+
+  async openModal() {
+    const modal = await this.modalController.create({
+      component: JoinModalComponent,
+      cssClass: "test"
+    });
+
+    return await modal.present();
   }
 }

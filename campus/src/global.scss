@@ -37,7 +37,10 @@
 @import "@ionic/angular/css/palettes/dark.system.css";
 
 
-
+.test{
+  --border-radius: 50px;
+  --height: 500px;
+}
 
 //-----------------------------------
 //추가로 작성한 메타버스 플랫폼 전역 css변수

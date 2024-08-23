@@ -1,3 +1,28 @@
-<p>
-  join-modal works!
-</p>
+
+<ion-content class="modal-content">
+  <ion-toolbar class="modal-toolbar">
+    <div>
+      <button class="close-btn" (click)="closeModal()">
+        <img id="close" src="../../assets/svg/close.svg" alt="close">
+      </button>
+    </div>
+    <div class="toolbar-content">
+      <ion-title class="join-title">회원가입</ion-title>
+      <div class="join-Big-title">메타의 품격</div>
+      <img style="margin: 15px;" src="../../assets/svg/HIP-Logo.svg">
+      <div style="font-size: 14px">당신은 어떤 사람인가요?</div>
+      <div class="user-rule">
+        <button (click)="setUserRole('student')" class="user-rule-btn">
+          <img src="../../assets/svg/Instruc-icon.svg">
+          <div class="user-rule-title">학생</div>
+          <div>학생으로 가입하기</div>
+        </button>
+        <button (click)="setUserRole('instructor')" class="user-rule-btn">
+          <img src="../../assets/svg/student-icon.svg">
+          <div class="user-rule-title">강사</div>
+          <div>강사로 가입하기</div>
+        </button>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-content>

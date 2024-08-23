@@ -141,7 +141,7 @@ ion-label:hover{
 }
 
 //회원가입
-
+//모달
 ion-modal{
   --border-radius: 22px;
   --box-shadow: none;
@@ -150,7 +150,6 @@ ion-modal{
 
 }
 
-//모달
 .join-title{
   font-size: 15px;
 
@@ -242,4 +241,8 @@ button{
   font-family: pretendard-B, serif;
 
 
+}
+
+.custom-modal{
+  --border-radius: 50px;
 }
