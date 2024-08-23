@@ -1,3 +1,7 @@
+
+
+
+
 .ion-color-primary{
   --ion-color-base:#7269EE !important;
 }
@@ -98,6 +102,13 @@ ion-checkbox::part(container) {
   font-weight: 550;
   max-width: 210px;
 }
+ion-checkbox {
+  --checkbox-background-checked: #7269EE;
+}
+
+
+
+
 
 .section1 .classycontent .clssfy{
   width: 100%;
@@ -130,11 +141,15 @@ ion-checkbox::part(container) {
   font-weight: 500;
   font-size: 15px;
   color: #4F4F4F;
+
 }
+
 
 .classnamebox{
   margin-top: 25px;
 }
+
+
 
 
 
@@ -185,7 +200,7 @@ ion-checkbox::part(container) {
 .cardcontainer {
   display: flex; /* Flexbox 활성화 */
   flex-wrap: wrap; /* 카드가 공간에 맞춰 줄바꿈되도록 설정 */
-  margin: auto;
+
 }
 
 app-card {
