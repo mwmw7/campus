@@ -6,8 +6,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { StudyroommainPageRoutingModule } from './studyroommain-routing.module';
 
-import { StudyroommainPage } from './studyroomMain.page';
-import {StudyroomSideBarComponent} from "../studyroom-side-bar/studyroom-side-bar.component";
+import { StudyroommainPage } from './studyroommain.page';
 
 @NgModule({
   imports: [
@@ -16,11 +15,6 @@ import {StudyroomSideBarComponent} from "../studyroom-side-bar/studyroom-side-ba
     IonicModule,
     StudyroommainPageRoutingModule
   ],
-  exports: [
-    StudyroomSideBarComponent
-  ],
-  declarations: [StudyroommainPage, StudyroomSideBarComponent]
-
+  declarations: [StudyroommainPage]
 })
-export class StudyroommainPageModule {
-}
+export class StudyroommainPageModule {}

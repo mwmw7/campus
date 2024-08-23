@@ -8,12 +8,12 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class LecturePage implements OnInit {
 
-    public folder!: string;
+    public lecture!: string;
     private activatedRoute = inject(ActivatedRoute);
     constructor() {}
 
     ngOnInit() {
-        this.folder = this.activatedRoute.snapshot.paramMap.get('id') as string;
+        this.lecture = this.activatedRoute.snapshot.paramMap.get('id') as string;
     }
 
 }

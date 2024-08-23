@@ -1,5 +1,24 @@
-<app-studyroom-side-bar></app-studyroom-side-bar>
+<!-- Header -->
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ lecture }}</ion-title>
+  </ion-toolbar>
+</ion-header>
 
-<ion-content>
-  Hello
+<!-- Content -->
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{ lecture }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Main Content Area -->
+  <div id="container">
+    <strong class="capitalize">{{ lecture }}</strong>
+    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  </div>
 </ion-content>

@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { SidemenuComponent } from './sidemenucomponent/sidemenu.component';
-import {TopBarComponent} from "./top-bar/top-bar.component"; // 사이드 메뉴 컴포넌트
+import {TopBarComponent} from "./top-bar/top-bar.component";
+import {LecturePageModule} from "./lecture/lecture.module"; // 사이드 메뉴 컴포넌트
 
 const routes: Routes = [
   {
@@ -17,7 +18,7 @@ const routes: Routes = [
   },
   {
     path: 'studyroommain',
-    loadChildren: () => import('./studyroommain/studyroommain.module').then( m => m.StudyroommainPageModule)
+    loadChildren: () => import('./studyroommain/studyroommain.module').then(m => m.StudyroommainPageModule)
   },
   {
     path: 'exhibitionmain',
@@ -43,12 +44,10 @@ const routes: Routes = [
     path: 'joinpage',
     loadChildren: () => import('./joinpage/joinpage.module').then( m => m.JoinpagePageModule)
   },
-
-
-
-
-
-// 사이드 메뉴 경로
+  {
+    path: 'lecture',
+    loadChildren: () => import('./lecture/lecture.module').then( m => m.LecturePageModule)
+  },
 
 ];
 
