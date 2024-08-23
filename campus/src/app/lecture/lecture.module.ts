@@ -7,7 +7,6 @@ import { IonicModule } from '@ionic/angular';
 import { LecturePageRoutingModule } from './lecture-routing.module';
 
 import { LecturePage } from './lecture.page';
-import {StudyroommainPageModule} from "../studyroommain/studyroommain.module";
 
 @NgModule({
     imports: [
@@ -15,7 +14,6 @@ import {StudyroommainPageModule} from "../studyroommain/studyroommain.module";
         FormsModule,
         IonicModule,
         LecturePageRoutingModule,
-        StudyroommainPageModule
     ],
   declarations: [LecturePage]
 })
