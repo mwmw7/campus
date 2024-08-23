@@ -1,3 +1,7 @@
+.ion-color-primary{
+  --ion-color-base:#7269EE !important;
+}
+
 
 ion-checkbox::part(container) {
   border-radius: 6px;
@@ -187,7 +191,7 @@ ion-checkbox::part(container) {
 app-card {
   width: 100%; /* 기본 너비를 100%로 설정 */
   max-width: 400px; /* 최대 너비를 300px로 설정 */
-  min-width: 200px; /* 최소 너비를 200px로 설정 */
+  min-width: 300px; /* 최소 너비를 200px로 설정 */
 
   margin: 10px; /* 카드 간 간격을 위한 마진 추가 */
 }
