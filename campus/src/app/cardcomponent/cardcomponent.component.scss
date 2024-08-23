@@ -1,4 +1,6 @@
 
+
+
 ion-button{
   --padding-start: 0; /* 좌측 패딩 제거 */
   --padding-end: 0; /* 우측 패딩 제거 */
@@ -34,16 +36,16 @@ ion-card-header {
 }
 
 ion-card-title {
-  font-size: 1.8em;   // 제목 글씨 크기 조정
+  font-size: 1.6em;   // 제목 글씨 크기 조정
   overflow: hidden;
-  text-overflow: ellipsis; // 넘치는 제목 생략 기호로 표시
   font-family: 'pretendard-B', serif;
 }
 
 ion-card-subtitle {
-  font-size: 1.2em;     // 부제목 글씨 크기 조정
+  font-size: 1.0em;     // 부제목 글씨 크기 조정
   overflow: hidden;
   text-overflow: ellipsis; // 넘치는 부제목 생략 기호로 표시
+  font-family: 'pretendard-B', serif;
 }
 
 ion-card-content {

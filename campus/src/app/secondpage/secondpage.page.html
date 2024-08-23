@@ -26,10 +26,10 @@
           <span class="currycu">교육과정</span><span class="reset">초기화<ion-icon name="reload-outline" class="reseticon"></ion-icon></span>
           <div class="classnamebox">
             <div class="classname">
-              <ion-checkbox labelPlacement="end">웹 개발반</ion-checkbox>
+              <ion-checkbox class="custom-checkbox" labelPlacement="end">웹 개발반</ion-checkbox>
             </div>
             <div class="classname">
-              <ion-checkbox labelPlacement="end">3D 프로그래밍</ion-checkbox>
+              <ion-checkbox class="custom-checkbox" labelPlacement="end">3D 프로그래밍</ion-checkbox>
             </div>
           </div>
         </div>
@@ -37,6 +37,16 @@
     </div>
 
     <div class="section2">
+
+
+      <ng-container *ngFor="let card of cards" class="cardcontainer">
+        <app-card class="card"
+                  [title]="card.title"
+                  [teamname]="card.teamname"
+                  [content]="card.content"
+                  [image]="card.image">
+        </app-card>
+      </ng-container>
       <!--   정렬 기능-->
       <ion-accordion-group class = "sortgroup">
         <ion-accordion class="sorthead" [value]="isOpen ? 'first' : ''">
@@ -58,14 +68,7 @@
 
 
       <!--      카드-->
-      <ng-container *ngFor="let card of cards" class="cardcontainer">
-        <app-card class="card"
-                  [title]="card.title"
-                  [teamname]="card.teamname"
-                  [content]="card.content"
-                  [image]="card.image">
-        </app-card>
-      </ng-container>
+
     </div>
   </div>
 
