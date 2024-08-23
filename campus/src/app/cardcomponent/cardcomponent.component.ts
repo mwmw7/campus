@@ -25,4 +25,5 @@ export class CardComponent {
 }
 
 
-
+export class CardcomponentComponent {
+}
