@@ -41,6 +41,14 @@ const routes: Routes = [
     loadChildren: () => import('./joinpage/joinpage.module').then( m => m.JoinpagePageModule)
   },
   {
+    path: 'exhibition-details',
+    loadChildren: () => import('./exhibition-details/exhibition-details.module').then( m => m.ExhibitionDetailsPageModule)
+  },
+  {
+    path: 'exhibition-details/:id', loadChildren: () => import('./exhibition-details/exhibition-details.module').then(m => m.ExhibitionDetailsPageModule)
+  },
+// 사이드 메뉴 경로
+  {
     path: 'lecture',
     loadChildren: () => import('./lecture/lecture.module').then( m => m.LecturePageModule)
   },
@@ -49,8 +57,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
-  ],
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}

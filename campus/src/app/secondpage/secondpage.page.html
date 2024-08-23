@@ -8,7 +8,7 @@
 
 
 <ion-content>
-  <div class="searchbox">
+  <div class="headerbox">
     <div class = "searchcontent">
       <div class="searchmessage">당신의 <span class="output">output</span>을 검색해보세요.</div>
       <div class="searchcomponent">
@@ -41,6 +41,7 @@
 
       <ng-container *ngFor="let card of cards" class="cardcontainer">
         <app-card class="card"
+                  [id]="card.id"
                   [title]="card.title"
                   [teamname]="card.teamname"
                   [content]="card.content"

@@ -1,13 +1,10 @@
-<ion-button fill="clear">
-  <ion-card>
-    <img alt="Card image" [src]="image" />
-    <ion-card-header>
-      <ion-card-title>{{title}}</ion-card-title>
-      <ion-card-subtitle>{{teamname}}</ion-card-subtitle>
-    </ion-card-header>
-
-    <ion-card-content>
-      {{ content }}
-    </ion-card-content>
-  </ion-card>
-</ion-button>
+<ion-card (click)="navigateToDetail()">
+  <img [src]="image" />
+  <ion-card-header>
+    <ion-card-title>{{ title }}</ion-card-title>
+    <ion-card-subtitle>{{ teamname }}</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    {{ content }}
+  </ion-card-content>
+</ion-card>
