@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudyroommainPage implements OnInit {
   public appPages = [
-    { title: 'Inbox', url: '/lecture/Indox', icon: 'mail' },
+    { title: 'Inbox', url: '/lecture/inbox', icon: 'mail' },
     { title: 'Outbox', url: '/folder/outbox', icon: 'paper-plane' },
     { title: 'Favorites', url: '/folder/favorites', icon: 'heart' },
     { title: 'Archived', url: '/folder/archived', icon: 'archive' },
