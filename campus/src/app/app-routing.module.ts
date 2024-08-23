@@ -18,7 +18,7 @@ const routes: Routes = [
   },
   {
     path: 'studyroommain',
-    loadChildren: () => import('./studyroommain/studyroommain.module').then( m => m.StudyroommainPageModule)
+    loadChildren: () => import('./studyroommain/studyroommain.module').then(m => m.StudyroommainPageModule)
   },
   {
     path: 'exhibitionmain',
