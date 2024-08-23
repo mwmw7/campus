@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { StudyroommainPageRoutingModule } from './studyroomMain-routing.module';
+import { StudyroommainPageRoutingModule } from './studyroommain-routing.module';
 
 import { StudyroommainPage } from './studyroommain.page';
 

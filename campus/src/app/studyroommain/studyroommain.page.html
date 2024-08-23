@@ -1,8 +1,7 @@
-<ion-split-pane contentId="main-content">
+<ion-split-pane contentId="main-content" when="xs">
   <ion-menu contentId="main-content" type="overlay">
     <ion-content>
       <ion-list id="inbox-list">
-
         <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
           <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
             <ion-icon aria-hidden="true" slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
@@ -13,10 +12,10 @@
 
       <ion-list id="labels-list">
         <ion-list-header>Labels</ion-list-header>
-
+        <!-- Add label items if necessary -->
       </ion-list>
     </ion-content>
   </ion-menu>
-  <ion-router-outlet id="main-content">ㅇㅇㅇㅇ</ion-router-outlet>
-</ion-split-pane>
 
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+</ion-split-pane>

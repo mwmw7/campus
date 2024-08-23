@@ -9,7 +9,7 @@ const routes: Routes = [
     component: StudyroommainPage // 컴포넌트를 지정
   },
   {
-    path: 'lecture/:id',
+    path: 'lecture',
     loadChildren: () => import('../lecture/lecture.module').then( m => m.LecturePageModule)
   },
 ];
