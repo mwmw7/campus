@@ -41,6 +41,7 @@
 
       <ng-container *ngFor="let card of cards" class="cardcontainer">
         <app-card class="card"
+                  [id]="card.id"
                   [title]="card.title"
                   [teamname]="card.teamname"
                   [content]="card.content"

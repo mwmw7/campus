@@ -43,6 +43,14 @@ const routes: Routes = [
     path: 'joinpage',
     loadChildren: () => import('./joinpage/joinpage.module').then( m => m.JoinpagePageModule)
   },
+  {
+    path: 'exhibition-details',
+    loadChildren: () => import('./exhibition-details/exhibition-details.module').then( m => m.ExhibitionDetailsPageModule)
+  },
+  {
+    path: 'exhibition-details/:id', loadChildren: () => import('./exhibition-details/exhibition-details.module').then(m => m.ExhibitionDetailsPageModule)
+  },
+
 
 
 
@@ -54,8 +62,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
-  ],
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
