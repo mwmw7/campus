@@ -43,6 +43,10 @@ const routes: Routes = [
     path: 'joinpage',
     loadChildren: () => import('./joinpage/joinpage.module').then( m => m.JoinpagePageModule)
   },
+  {
+    path: 'lecture/:id',
+    loadChildren: () => import('./lecture/le.module').then( m => m.FolderPageModule)
+  },
 
 
 
