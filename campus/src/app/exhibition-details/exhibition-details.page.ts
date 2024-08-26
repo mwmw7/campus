@@ -30,10 +30,12 @@ export class ExhibitionDetailsPage implements OnInit {
   ];
 
   members: { name: string; image: string }[] = [
-    { name: '작가 A', image: 'assets/images/artist-a.jpg' },
-    { name: '작가 B', image: 'assets/images/artist-b.jpg' },
-    { name: '작가 C', image: 'assets/images/artist-c.jpg' },
+    { name: '작가 A', image: '' },
+    { name: '작가 B', image: '' },
+    { name: '작가 C', image: '' },
   ];
+
+  noneImage: string = '../assets/svg/none-people.svg';
 
   output: string = '전시회는 2024년 5월 1일부터 6월 30일까지 진행됩니다.';
 }
