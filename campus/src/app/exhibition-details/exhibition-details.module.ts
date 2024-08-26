@@ -8,6 +8,7 @@ import { ExhibitionDetailsPageRoutingModule } from './exhibition-details-routing
 
 import { ExhibitionDetailsPage } from './exhibition-details.page';
 import {TopBarComponent} from "../top-bar/top-bar.component";
+import {CardComponent} from "../cardcomponent/cardcomponent.component";
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import {TopBarComponent} from "../top-bar/top-bar.component";
     FormsModule,
     IonicModule,
     ExhibitionDetailsPageRoutingModule,
-    TopBarComponent
+    TopBarComponent,
+    CardComponent
   ],
   declarations: [ExhibitionDetailsPage]
 })

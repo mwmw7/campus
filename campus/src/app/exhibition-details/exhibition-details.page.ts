@@ -21,4 +21,21 @@ export class ExhibitionDetailsPage implements OnInit {
     // 실제 카드 데이터를 불러오는 로직을 여기에서 구현합니다.
     this.cardDetails = `카드 ID: ${this.cardId}의 상세 내용입니다.`;
   }
+
+  introduce: string[] = [
+    '이 전시회는 현대 미술의 다양한 경향을 탐구합니다.',
+    '참여 작가들은 다양한 배경을 가지고 있습니다.',
+    '전시회는 지역 사회와의 연계를 강조합니다.',
+    '관람객과의 소통을 중시하는 전시입니다.'
+  ];
+
+  members: { name: string; image: string }[] = [
+    { name: '작가 A', image: '' },
+    { name: '작가 B', image: '' },
+    { name: '작가 C', image: '' },
+  ];
+
+  noneImage: string = '../assets/svg/none-people.svg';
+
+  output: string = '전시회는 2024년 5월 1일부터 6월 30일까지 진행됩니다.';
 }
