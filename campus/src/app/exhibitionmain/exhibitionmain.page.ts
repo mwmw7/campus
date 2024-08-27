@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-secondpage',
-  templateUrl: './secondpage.page.html',
-  styleUrls: ['./secondpage.page.scss'],
+  selector: 'app-exhibitionmain',
+  templateUrl: './exhibitionmain.page.html',
+  styleUrls: ['./exhibitionmain.page.scss'],
 })
-export class SecondpagePage  {
+export class ExhibitionmainPage  {
   cards = [
     {
       id: 1,

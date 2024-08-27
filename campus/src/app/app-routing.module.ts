@@ -5,6 +5,7 @@ import {TopBarComponent} from "./top-bar/top-bar.component";
 
 
 
+// @ts-ignore
 const routes: Routes = [
   {
     path: '',
@@ -23,8 +24,8 @@ const routes: Routes = [
     loadChildren: () => import('./firstpage/firstpage.module').then( m => m.FirstpagePageModule)
   },
   {
-    path: 'secondpage',
-    loadChildren: () => import('./secondpage/secondpage.module').then( m => m.SecondpagePageModule)
+    path: 'exhibitionmain',
+    loadChildren: () => import('./exhibitionmain/exhibitionmain.module').then(m => m.ExhibitionmainPageModule)
   },
   {
     path: 'thirdpage',

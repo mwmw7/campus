@@ -4,9 +4,11 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { SecondpagePageRoutingModule } from './secondpage-routing.module';
+// @ts-ignore
+import { ExhibitionmainPageRoutingModule } from './exhibitionmain-routing.module';
 
-import { SecondpagePage } from './secondpage.page';
+// @ts-ignore
+import { ExhibitionmainPage } from './exhibitionmain.page';
 import {TopBarComponent} from "../top-bar/top-bar.component";
 import {CardComponent} from "../cardcomponent/cardcomponent.component";
 
@@ -15,10 +17,10 @@ import {CardComponent} from "../cardcomponent/cardcomponent.component";
     CommonModule,
     FormsModule,
     IonicModule,
-    SecondpagePageRoutingModule,
+    ExhibitionmainPageRoutingModule,
     TopBarComponent,
     CardComponent
   ],
-  declarations: [SecondpagePage]
+  declarations: [ExhibitionmainPage]
 })
-export class SecondpagePageModule {}
+export class ExhibitionmainPageModule {}
