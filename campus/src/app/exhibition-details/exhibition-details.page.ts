@@ -23,19 +23,21 @@ export class ExhibitionDetailsPage implements OnInit {
   }
 
   introduce: string[] = [
-    '이 전시회는 현대 미술의 다양한 경향을 탐구합니다.',
-    '참여 작가들은 다양한 배경을 가지고 있습니다.',
-    '전시회는 지역 사회와의 연계를 강조합니다.',
-    '관람객과의 소통을 중시하는 전시입니다.'
+    'Metaverse Campus 제작',
+    '강의 로그, 출석관리 기능 구현',
+    '기존의 메타버스 창작물 보관'
   ];
 
   members: { name: string; image: string }[] = [
-    { name: '작가 A', image: '' },
-    { name: '작가 B', image: '' },
-    { name: '작가 C', image: '' },
+    { name: '김동년', image: '' },
+    { name: '용채영', image: '' },
+    { name: '김재호', image: '' },
+    { name: '박찬진', image: '' },
+    { name: '손정민', image: '' },
   ];
 
   noneImage: string = '../assets/svg/none-people.svg';
 
-  output: string = '전시회는 2024년 5월 1일부터 6월 30일까지 진행됩니다.';
+  outputImage: string = '../assets/jpg/1.jpg'
+
 }

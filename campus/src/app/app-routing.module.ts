@@ -18,10 +18,7 @@ const routes: Routes = [
   {
     path: 'sidemenu', component: SidemenuComponent
   },
-  {
-    path: 'exhibitionmain',
-    loadChildren: () => import('./exhibitionmain/exhibitionmain.module').then( m => m.ExhibitionmainPageModule)
-  },
+
   {
     path: 'main',
     loadChildren: () => import('./firstpage/firstpage.module').then( m => m.FirstpagePageModule)

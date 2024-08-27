@@ -21,18 +21,24 @@
 }
 
 .maincontent {
-  height: 100vh; /* 전체 높이를 사용 */
+  height: min-content;
   margin-top: -50px;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   background-color: white;
 }
 
+.maxmaincontent{
+  max-width: 1200px;
+  margin: auto;
+}
+
 .texts{
   display: flex; /* 플렉스 박스 사용 */
   align-items: center; /* 세로 정렬 */
-  font-size: 30px;
+  font-size: 35px;
   font-family: "pretendard-B", serif;
+  margin :50px 0 50px 0
 }
 
 .icons{
@@ -44,17 +50,52 @@
   padding: 4px;
 }
 
-.member-image {
-  width: 80px; /* 원형 이미지의 너비 */
-  height: 80px; /* 원형 이미지의 높이 */
-  border-radius: 50%; /* 원형으로 만들기 */
-  object-fit: cover; /* 이미지 비율 유지 */
-  margin-right: 10px; /* 이름과의 간격 조정 */
+.introduce-content{
+  font-family: "pretendard-R", serif;
+  font-size: 30px;
+  margin: 30px;
 }
+
+.member-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* 멤버가 추가될 때 가로로 나열되도록 설정 */
+  list-style-type: none;
+  padding: 0;
+}
+
+.member-item {
+  text-align: center; /* 이름을 중앙 정렬 */
+  margin: auto;
+  max-margin : 100px
+}
+
+.member-container {
+  display: flex;
+  flex-direction: column; /* 이미지와 이름을 세로로 나열 */
+  align-items: center; /* 가운데 정렬 */
+}
+
+.member-image {
+  width: 210px; /* 이미지 크기 조정 */
+  height: 230px; /* 이미지 크기 조정 */
+  border-radius: 50%; /* 원형으로 만들기 */
+}
+
+.member-name {
+  margin-top: 5px; /* 이미지와 이름 사이 간격 */
+  font-family: "pretendard-B", serif;
+  font-size: 25px;
+}
+
 
 .boundary{
   margin-bottom: 20px;
 }
 
+.output-image{
+  margin: 30px;
+  border-radius: 5px;
+}
 
 
