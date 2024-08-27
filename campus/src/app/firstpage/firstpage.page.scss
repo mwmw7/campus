@@ -1,4 +1,15 @@
-ion-refresher .refresher-pulling,
-ion-refresher .refresher-refreshing {
-  display: none;
+/* firstpage.page.scss */
+ion-content {
+  background: linear-gradient(213deg, #FDF2FF 0%, #E9F1FF 100%) !important;
+  position: relative;
+}
+
+#threeContainer {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5); // 반투명 배경으로 설정
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }

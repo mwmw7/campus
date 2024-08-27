@@ -1,0 +1,8 @@
+Model Information:
+* title:	DAE Villages GameArt
+* source:	https://sketchfab.com/3d-models/dae-villages-gameart-ae3a0d8280a34cad885fe15daea2639d
+* author:	gabrielestefa (https://sketchfab.com/gabrielestefa)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works
