@@ -43,7 +43,7 @@ export class TopBarComponent implements OnInit {
   async openModal() {
     const modal = await this.modalController.create({
       component: JoinModalComponent,
-      cssClass: "test"
+      cssClass: "modal"
     });
 
     return await modal.present();

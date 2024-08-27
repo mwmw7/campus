@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { SidemenuComponent } from './sidemenucomponent/sidemenu.component';
 import {TopBarComponent} from "./top-bar/top-bar.component";
-import {LecturePageModule} from "./lecture/lecture.module"; // 사이드 메뉴 컴포넌트
 
 
 
@@ -51,11 +50,12 @@ const routes: Routes = [
   },
 // 사이드 메뉴 경로
   {
-    path: 'lecture',
-    loadChildren: () => import('./lecture/lecture.module').then( m => m.LecturePageModule)
-  },  {
     path: 'studyroom',
     loadChildren: () => import('./studyroom/studyroom.module').then( m => m.StudyroomPageModule)
+  },
+  {
+    path: 'page',
+    loadChildren: () => import('./page/page.module').then( m => m.PagePageModule)
   },
 
 

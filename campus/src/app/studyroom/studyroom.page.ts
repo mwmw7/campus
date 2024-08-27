@@ -7,12 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudyroomPage implements OnInit {
   public appPages = [
-    { title: 'Inbox', url: '/folder/inbox', icon: 'mail' },
-    { title: 'Outbox', url: '/folder/outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/spam', icon: 'warning' },
+    { title: '홈', url: '/studyroom/page/home', icon: 'home' },
+    { title: '강의', url: '/studyroom/page/room', icon: 'paper-plane' },
+    { title: '프로젝트', url: '/studyroom/page/project', icon: 'heart' },
   ];
 
   constructor() { }
