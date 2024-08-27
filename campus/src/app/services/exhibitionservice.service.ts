@@ -11,3 +11,6 @@ export class ExhibitionService {
 
 
 }
+
+export class ExhibitionserviceService {
+}
