@@ -1,8 +1,53 @@
-.selected {
-  background-color: #f0f0f0; /* 선택한 메뉴 항목의 배경색을 변경 */
-  color: #333; /* 선택한 메뉴 항목의 텍스트 색상을 변경 */
+
+//파일 전역 디자인
+ion-item{
+  margin: 12px;
+  color: #555555;
+
 }
 
+ion-icon{
+  margin: 10px;
+}
+
+ion-label.title{
+  font-family: "pretendard-B", serif;
+}
+
+
+/* 선택된 메뉴 항목의 스타일 */
+ion-item.selected {
+  --background: #DEE5FF; /* 선택된 항목의 배경색을 회색으로 설정 */
+  color: #5572E2; /* 텍스트 색상 설정 */
+  border-radius: 10px;
+}
+
+ion-item.selected:hover{
+  color: #ff4141;
+}
+
+ion-item:hover{
+  color: #ff4141;
+}
+
+.selected ion-icon {
+  color: #5572E2;
+}
+
+
 .split-main{
-  max-width: 18%;
+  max-width: 10%;
+  --background-color: #ff0000;
+  --min-width: 17%;
+}
+
+#inbox-list{
+  //text-align: center;
+
+}
+
+#logo{
+  width: 80px;
+  margin-left: 30px;
+  margin-bottom: 40px;
 }
