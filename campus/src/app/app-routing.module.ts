@@ -48,9 +48,14 @@ const routes: Routes = [
   },
 // 사이드 메뉴 경로
   {
-    path: 'lecture',
-    loadChildren: () => import('./lecture/lecture.module').then( m => m.LecturePageModule)
+    path: 'studyroom',
+    loadChildren: () => import('./studyroom/studyroom.module').then( m => m.StudyroomPageModule)
   },
+  {
+    path: 'page',
+    loadChildren: () => import('./page/page.module').then( m => m.PagePageModule)
+  },
+
 
 ];
 

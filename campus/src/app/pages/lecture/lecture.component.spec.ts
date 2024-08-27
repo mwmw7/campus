@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { StudyroomSideBarComponent } from './studyroom-side-bar.component';
+import { LectureComponent } from './lecture.component';
 
-describe('StudyroomSideBarComponent', () => {
-  let component: StudyroomSideBarComponent;
-  let fixture: ComponentFixture<StudyroomSideBarComponent>;
+describe('LectureComponent', () => {
+  let component: LectureComponent;
+  let fixture: ComponentFixture<LectureComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ StudyroomSideBarComponent ],
+      declarations: [ LectureComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(StudyroomSideBarComponent);
+    fixture = TestBed.createComponent(LectureComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

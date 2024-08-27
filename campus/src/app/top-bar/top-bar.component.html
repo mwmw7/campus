@@ -11,16 +11,19 @@
         <ion-button routerLink="/exhibitionmain" routerDirection="root" fill="clear">
           <ion-label>전시관</ion-label>
         </ion-button>
+        <a href="/studyroom" target="_blank">
+          <ion-button routerDirection="root" fill="clear">
+            <ion-label>학습룸</ion-label>
+          </ion-button>
+        </a>
       </ng-container>
       <ng-container *ngIf="isLoggedIn">
         <ion-button routerLink="/exhibitionmain" routerDirection="root" fill="clear">
           <ion-label>전시관</ion-label>
         </ion-button>
-        <a href="/studyroom-side-bar" target="_blank">
-          <ion-button  routerDirection="root" fill="clear">
+          <ion-button  routerLink="/studyroom-side-bar" routerDirection="root" fill="clear">
             <ion-label>학습룸</ion-label>
           </ion-button>
-        </a>
       </ng-container>
     </div>
     <ion-searchbar class="title-searchbar" placeholder=""></ion-searchbar>
