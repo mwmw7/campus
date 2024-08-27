@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+// @ts-ignore
 import { ExhibitionmainPage } from './exhibitionmain.page';
 
 describe('ExhibitionmainPage', () => {

@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { SidemenuComponent } from './sidemenucomponent/sidemenu.component';
 import {TopBarComponent} from "./top-bar/top-bar.component";
-import {LecturePageModule} from "./lecture/lecture.module"; // 사이드 메뉴 컴포넌트
 
 
 
+// @ts-ignore
 const routes: Routes = [
   {
     path: '',
@@ -18,17 +18,14 @@ const routes: Routes = [
   {
     path: 'sidemenu', component: SidemenuComponent
   },
-  {
-    path: 'exhibitionmain',
-    loadChildren: () => import('./exhibitionmain/exhibitionmain.module').then( m => m.ExhibitionmainPageModule)
-  },
+
   {
     path: 'main',
     loadChildren: () => import('./firstpage/firstpage.module').then( m => m.FirstpagePageModule)
   },
   {
-    path: 'secondpage',
-    loadChildren: () => import('./secondpage/secondpage.module').then( m => m.SecondpagePageModule)
+    path: 'exhibitionmain',
+    loadChildren: () => import('./exhibitionmain/exhibitionmain.module').then(m => m.ExhibitionmainPageModule)
   },
   {
     path: 'thirdpage',

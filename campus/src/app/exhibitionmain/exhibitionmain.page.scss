@@ -1,0 +1,236 @@
+
+
+
+
+.ion-color-primary{
+  --ion-color-base:#7269EE !important;
+}
+
+
+ion-checkbox::part(container) {
+  border-radius: 6px;
+  border: 1px solid #DFDFDF;
+}
+
+
+.shadow-box {
+  padding: 20px;
+  background-color: white;
+  position: relative; /* 그림자 효과를 위한 위치 설정 */
+  border-top: 2px solid transparent; /* 위쪽 테두리 설정 */
+  /* 왼쪽과 아래쪽 그림자를 제거하기 위해 수평, 수직 오프셋을 조정 */
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.searchbox {
+  width: 100%;
+  height: 350px;
+  background: linear-gradient(213deg, #FDF2FF 0%, #E9F1FF 100%);
+}
+
+.searchbox .searchcontent {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 수평 중앙 정렬 */
+  justify-content: center; /* 수직 중앙 정렬 */
+  height: 100%; /* 부모 요소의 높이를 차지하게 */
+  margin: auto;
+}
+
+.searchbox .searchmessage {
+  font-size: 28px;
+  font-family: 'pretendard-B', serif;
+  align-self: flex-start; /* 메시지를 왼쪽 정렬 */
+  color : #545454;
+}
+
+.searchbox .searchmessage .output {
+  font-family: 'pretendard-B', serif;
+  color: #7269EE;
+}
+
+.searchbox .searchcomponent {
+  display: flex;
+  width: 100%; /* 부모 요소의 너비를 차지하게 */
+  align-items: center; /* 자식 요소를 수직 중앙 정렬 */
+  margin-top: 10px;
+}
+
+.searchbox .searchbar {
+
+  height: 42px; /* 검색창의 높이 설정 */
+  display: flex;
+  padding: 0;
+  --border-radius: 10px 0px 0px 10px;
+
+
+}
+
+.searchbox .searchbarbtn {
+  height: 42px; /* 버튼의 높이를 검색창과 동일하게 설정 */
+  width: 80px;
+  display: flex;
+  justify-content: flex-end;
+  float: right;
+  margin: 0;
+  font-weight: 700;
+  --border-radius: 0px 10px 10px 0;
+}
+.maincontent {
+  display: flex; /* Flexbox 활성화 */
+  height: 100vh; /* 전체 높이를 사용 */
+  margin-top: -50px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.section1 {
+  flex: 1;
+  background-color: #ffffff; /* 첫 번째 섹션 색상 */
+  border-top-left-radius: 30px;
+  min-width: 250px;
+  display: flex;
+  justify-content: center;
+}
+.section1 .classycontent{
+  width: 80%;
+  height: 100%;
+  margin-top: 50px;
+  font-weight: 550;
+  max-width: 210px;
+}
+ion-checkbox {
+  --checkbox-background-checked: #7269EE;
+}
+
+
+
+
+
+.section1 .classycontent .clssfy{
+  width: 100%;
+  height: 150px;
+  border-radius: 20px;
+  margin-top: 10px;
+  border: 1px solid #DFDFDF;
+  padding-top: 17px;
+}
+
+.section1 .classycontent .clssfy .currycu{
+  margin-left: 20px;
+  margin-right: 60px;
+}
+
+.section1 .classycontent .clssfy .reset{
+  margin-right: revert;
+  font-size: 13px;
+  color: #B0B0B0;
+}
+
+.section1 .classycontent .clssfy .reset .reseticon{
+  margin-left: 8px;
+  color: #B0B0B0;
+}
+
+.classname{
+  margin-top: 5px;
+  margin-left: 20px;
+  font-weight: 500;
+  font-size: 15px;
+  color: #4F4F4F;
+
+}
+
+
+.classnamebox{
+  margin-top: 25px;
+}
+
+
+
+
+
+.section2 {
+  flex: 5;
+  padding: 10px; /* 내용물과 경계 간격 */
+  background-color: white ;
+  border-top-right-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+
+.sortgroup {
+  position: absolute; /* 절대 위치로 설정 */
+  top: 15px; /* 상단에 고정 */
+  right: 15px; /* 왼쪽에 고정 */
+  width: 115px;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+.sortgroup .sorthead{
+  border-radius: 10px;
+
+}
+
+.sortgroup .custom{
+  font-size: 13px;
+  --border-radius: 10px;
+
+}
+
+.ion-padding{
+  padding: 0;
+  background-color: white;
+}
+
+.ion-padding{
+  ion-button {
+    --background: transparent; /* 배경색 제거 */
+    --color: inherit; /* 텍스트 색상 유지 */
+    --box-shadow: none; /* 그림자 제거 */
+  }
+}
+
+.cardcontainer {
+  display: flex; /* Flexbox 활성화 */
+  flex-wrap: wrap; /* 카드가 공간에 맞춰 줄바꿈되도록 설정 */
+
+}
+
+app-card {
+  width: 100%; /* 기본 너비를 100%로 설정 */
+  max-width: 400px; /* 최대 너비를 300px로 설정 */
+  min-width: 300px; /* 최소 너비를 200px로 설정 */
+
+  margin: 10px; /* 카드 간 간격을 위한 마진 추가 */
+}
+
+/* 한 줄에 4개까지 들어가도록 설정 */
+@media (min-width: 1200px) {
+  app-card {
+    width: calc(25% - 20px); /* 한 줄에 4개가 들어가도록 너비 설정 */
+  }
+}
+
+/* 한 줄에 3개까지 들어가도록 설정 */
+@media (min-width: 900px) and (max-width: 1199px) {
+  app-card {
+    width: calc(33.33% - 20px); /* 한 줄에 3개가 들어가도록 너비 설정 */
+  }
+}
+
+/* 한 줄에 2개까지 들어가도록 설정 */
+@media (min-width: 600px) and (max-width: 899px) {
+  app-card {
+    width: calc(50% - 20px); /* 한 줄에 2개가 들어가도록 너비 설정 */
+  }
+}
+
+
+

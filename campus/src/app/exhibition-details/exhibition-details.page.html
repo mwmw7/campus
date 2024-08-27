@@ -11,34 +11,45 @@
   </div>
   <div class="maincontent shadow-box">
 
+    <div class="maxmaincontent">
+      <div class="introduce texts">
+        <ion-icon name="bulb-outline" class="icons">
+        </ion-icon> Introduce
+      </div>
+      <ul>
+        <li  class= "introduce-content" *ngFor="let intro of introduce">{{ intro }}</li>
+      </ul>
+      <ion-item class="boundary">
+      </ion-item>
 
-    <div class="introduce texts">
-      <ion-icon name="bulb-outline" class="icons">
-      </ion-icon> Introduce
+      <div class="members texts">
+        <ion-icon name="people-outline" class="icons"></ion-icon> Members
+      </div>
+      <ul class="member-list">
+        <li *ngFor="let member of members" class="member-item">
+          <div class="member-container">
+            <img [src]="member.image || noneImage" alt="{{ member.name }}" class="member-image" />
+            <p class="member-name">{{ member.name }}</p>
+          </div>
+        </li>
+      </ul>
+
+      <ion-item class="boundary">
+      </ion-item>
+
+      <div class="output texts">
+        <ion-icon name="trophy-outline" class="icons"></ion-icon> Output
+      </div>
+      <div class="member-container">
+        <img [src]="outputImage" alt="Output Image" class="output-image"/>
+      </div>
+      <ion-item class="boundary">
+      </ion-item>
+
+      <h2>{{ cardDetails }}</h2>
+
+
+
     </div>
-    <ul>
-      <li *ngFor="let intro of introduce">{{ intro }}</li>
-    </ul>
-    <ion-item class="boundary">
-    </ion-item>
-
-    <div class="members texts">
-      <ion-icon name="people-outline" class="icons"></ion-icon> Members
-    </div>
-    <ul>
-      <li *ngFor="let member of members">
-        <img [src]="member.image || noneImage" alt="{{ member.name }}" class="member-image" />
-        {{ member.name }}
-      </li>
-    </ul>
-    <ion-item class="boundary">
-    </ion-item>
-
-    <div class="output texts">
-      <ion-icon name="trophy-outline" class="icons"></ion-icon> Output</div>
-    <ion-item class="boundary">
-    </ion-item>
-
-    <h2>{{ cardDetails }}</h2>
   </div>
 </ion-content>

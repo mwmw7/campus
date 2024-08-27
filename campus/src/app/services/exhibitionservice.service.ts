@@ -1,25 +1,15 @@
-
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ExhibitionService {
-  private exhibitionData: any;
+  private apiUrl = 'http://localhost:3000/users';
 
-  constructor() { }
+  constructor(private http: HttpClient) {}
 
-  setExhibitionData(data: any) {
-    this.exhibitionData = data;
-  }
 
-  getExhibitionData() {
-    return this.exhibitionData;
-  }
-
-  clearExhibitionData() {
-    this.exhibitionData = null;
-  }
 }
 
 export class ExhibitionserviceService {
