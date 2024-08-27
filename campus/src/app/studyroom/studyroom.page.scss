@@ -36,9 +36,8 @@ ion-item:hover{
 
 
 .split-main{
-  max-width: 10%;
-  --background-color: #ff0000;
-  --min-width: 17%;
+  min-width: 180px;
+  width: 250px;
 }
 
 #inbox-list{
@@ -50,4 +49,7 @@ ion-item:hover{
   width: 80px;
   margin-left: 30px;
   margin-bottom: 40px;
+}
+#main-content{
+  background-color: #6d62fd;
 }
