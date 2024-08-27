@@ -7,6 +7,9 @@ import { IonicModule } from '@ionic/angular';
 import { PagePageRoutingModule } from './page-routing.module';
 
 import { PagePage } from './page.page';
+import {ProjectComponent} from "../pages/project/project.component";
+import {LectureComponent} from "../pages/lecture/lecture.component";
+import {HomeComponent} from "../pages/home/home.component";
 
 @NgModule({
   imports: [
@@ -15,6 +18,6 @@ import { PagePage } from './page.page';
     IonicModule,
     PagePageRoutingModule
   ],
-  declarations: [PagePage]
+  declarations: [PagePage, ProjectComponent, LectureComponent, HomeComponent]
 })
 export class PagePageModule {}
