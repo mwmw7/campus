@@ -1,0 +1,50 @@
+<form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="projectName">프로젝트 이름:</label>
+    <input type="text" id="projectName" [(ngModel)]="projectName" name="projectName" required />
+  </div>
+
+  <div class="form-group">
+    <label for="teamName">팀 이름:</label>
+    <input type="text" id="teamName" [(ngModel)]="teamName" name="teamName" required />
+  </div>
+
+  <div class="form-group">
+    <label for="course">교육과정:</label>
+    <input type="text" id="course" [(ngModel)]="course" name="course" required />
+  </div>
+
+  <div class="form-group">
+    <label for="thumbnail">썸네일 (이미지파일, 규격 1920x1080):</label>
+    <input type="file" id="thumbnail" (change)="onFileChange($event)" accept="image/*" required />
+
+  </div>
+
+  <div class="form-group">
+    <label for="introduce">Introduce (1~5 문장):</label>
+    <textarea id="introduce" [(ngModel)]="introduce" name="introduce" rows="5" required></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="memberName">Member 이름:</label>
+    <input type="text" id="memberName" [(ngModel)]="memberName" name="memberName" required />
+  </div>
+
+  <div class="form-group">
+    <label for="memberImage">Member 사진:</label>
+    <input type="file" id="memberImage" (change)="onMemberImageChange($event)" accept="image/*" required />
+
+  </div>
+
+  <div class="form-group">
+    <label for="outputImages">Output에서 사용할 사진 (1~3):</label>
+    <input type="file" id="outputImages" (change)="onOutputImagesChange($event)" accept="image/*" multiple required />
+  </div>
+
+  <div class="form-group">
+    <label for="outputVideo">Output에서 사용할 영상:</label>
+    <input type="file" id="outputVideo" (change)="onOutputVideoChange($event)" accept="video/*" required />
+  </div>
+
+  <button type="submit">제출</button>
+</form>
