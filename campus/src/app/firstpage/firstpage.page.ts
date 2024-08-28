@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+// @ts-ignore
 import * as THREE from 'three';
+// @ts-ignore
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
 @Component({
@@ -54,7 +56,7 @@ export class FirstpagePage implements OnInit {
 
   private loadModel() {
     const gltfLoader = new GLTFLoader();
-    gltfLoader.load('assets/gltf/cute_alien_character/scene.gltf', (gltf) => {
+    gltfLoader.load('assets/gltf/cute_alien_character/scene.gltf', (gltf: { scene: any; }) => {
       this.model = gltf.scene;
       this.scene.add(this.model);
       this.model.scale.set(0.1, 0.1, 0.1); // 크기를 2배로 설정
