@@ -30,6 +30,16 @@ ion-checkbox::part(container) {
   background: linear-gradient(213deg, #FDF2FF 0%, #E9F1FF 100%);
 }
 
+.BG-t{
+  width:100%;
+  height:100%;
+  background-color: #ffffff;
+  opacity: 0.1;
+  position: absolute;
+  top:10px;
+  z-index: -100;
+}
+
 .searchbox .searchcontent {
   width: 50%;
   display: flex;
