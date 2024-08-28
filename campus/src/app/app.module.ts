@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
-
+import { FormsModule } from '@angular/forms';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -11,7 +11,7 @@ import { SidemenuComponent } from './sidemenucomponent/sidemenu.component';
 import {TopBarComponent} from "./top-bar/top-bar.component";
 import {HttpClientModule} from "@angular/common/http";
 import { CommonModule } from '@angular/common';
-
+import{ExhibitionComponent} from "./exhibition/exhibition.component";
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,6 +22,8 @@ import { CommonModule } from '@angular/common';
       TopBarComponent,
       SidemenuComponent,
       CommonModule,
+      ExhibitionComponent,
+      FormsModule,
     ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

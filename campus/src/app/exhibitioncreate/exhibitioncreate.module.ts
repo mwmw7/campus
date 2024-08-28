@@ -8,16 +8,20 @@ import { ExhibitioncreatePageRoutingModule } from './exhibitioncreate-routing.mo
 
 import { ExhibitioncreatePage } from './exhibitioncreate.page';
 import {TopBarComponent} from "../top-bar/top-bar.component";
+import {CardComponent} from "../cardcomponent/cardcomponent.component";
+import {ExhibitionComponent} from "../exhibition/exhibition.component";
 
 
 @NgModule({
-    imports: [
-        CommonModule,
-        FormsModule,
-        IonicModule,
-        ExhibitioncreatePageRoutingModule,
-        TopBarComponent
-    ],
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    ExhibitioncreatePageRoutingModule,
+    TopBarComponent,
+    CardComponent,
+    ExhibitionComponent
+  ],
   declarations: [ExhibitioncreatePage]
 })
 export class ExhibitioncreatePageModule {}

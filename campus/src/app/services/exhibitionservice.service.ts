@@ -1,15 +1,23 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ExhibitionService {
-  private apiUrl = 'http://localhost:3000/users';
+  private exhibitionData: any = {};
 
-  constructor(private http: HttpClient) {}
+  constructor() {}
 
+  // 데이터를 저장하는 메서드
+  saveExhibitionData(data: any) {
+    this.exhibitionData = data;
+    console.log('Exhibition data saved:', this.exhibitionData);
+  }
 
+  // 데이터를 가져오는 메서드 (필요시)
+  getExhibitionData() {
+    return this.exhibitionData;
+  }
 }
 
 export class ExhibitionserviceService {
