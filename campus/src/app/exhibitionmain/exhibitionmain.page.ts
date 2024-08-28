@@ -166,6 +166,7 @@ export class ExhibitionmainPage  {
     this.isOpen = !this.isOpen; // 아코디언 열림/닫힘 상태 반전
   }
 
-
-
+  navigateToExhibitionCreate() {
+    this.router.navigate(['/exhibitioncreate']);
+  }
 }
