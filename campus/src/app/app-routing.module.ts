@@ -54,7 +54,11 @@ const routes: Routes = [
   {
     path: 'page',
     loadChildren: () => import('./page/page.module').then( m => m.PagePageModule)
+  },  {
+    path: 'exhibitioncreate',
+    loadChildren: () => import('./exhibitioncreate/exhibitioncreate.module').then( m => m.ExhibitioncreatePageModule)
   },
+
 
 
 ];
