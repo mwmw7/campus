@@ -62,6 +62,10 @@ const routes: Routes = [
     path: 'classsignup',
     loadChildren: () => import('./classsignup/classsignup.module').then( m => m.ClasssignupPageModule)
   },
+  {
+    path: 'classmy',
+    loadChildren: () => import('./classmy/classmy.module').then( m => m.ClassmyPageModule)
+  },
 
 
 
