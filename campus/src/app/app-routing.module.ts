@@ -66,6 +66,10 @@ const routes: Routes = [
     path: 'classmy',
     loadChildren: () => import('./classmy/classmy.module').then( m => m.ClassmyPageModule)
   },
+  {
+    path: 'classnone',
+    loadChildren: () => import('./classnone/classnone.module').then( m => m.ClassnonePageModule)
+  },
 
 
 
