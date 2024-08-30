@@ -58,6 +58,10 @@ const routes: Routes = [
     path: 'exhibitioncreate',
     loadChildren: () => import('./exhibitioncreate/exhibitioncreate.module').then( m => m.ExhibitioncreatePageModule)
   },
+  {
+    path: 'classsignup',
+    loadChildren: () => import('./classsignup/classsignup.module').then( m => m.ClasssignupPageModule)
+  },
 
 
 
