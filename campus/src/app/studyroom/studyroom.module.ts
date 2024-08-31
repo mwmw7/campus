@@ -7,14 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { StudyroomPageRoutingModule } from './studyroom-routing.module';
 
 import { StudyroomPage } from './studyroom.page';
+import {SidemenuComponent} from "../sidemenucomponent/sidemenu.component";
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    StudyroomPageRoutingModule
-  ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        StudyroomPageRoutingModule,
+        SidemenuComponent
+    ],
   declarations: [StudyroomPage]
 })
 export class StudyroomPageModule {}

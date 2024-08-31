@@ -70,6 +70,14 @@ const routes: Routes = [
     path: 'classnone',
     loadChildren: () => import('./classnone/classnone.module').then( m => m.ClassnonePageModule)
   },
+  {
+    path: 'projectsearch',
+    loadChildren: () => import('./projectsearch/projectsearch.module').then( m => m.ProjectsearchPageModule)
+  },
+  {
+    path: 'projectmy',
+    loadChildren: () => import('./projectmy/projectmy.module').then( m => m.ProjectmyPageModule)
+  },
 
 
 
