@@ -1,5 +1,11 @@
 ion-content {
   padding-left: 250px; /* 사이드 메뉴 너비만큼 여백 추가 */
+  flex: 1;
+
+}
+
+ion-app{
+  display: flex;
 }
 
 .main-content {
@@ -16,12 +22,13 @@ p {
   color: #666;
 }
 
-ion-header {
-  background-color: #3880ff; /* 헤더 배경색 */
-  color: white; /* 헤더 글자색 */
-}
 
 ion-toolbar {
-  --background: #3880ff; /* 툴바 배경색 */
+  padding-left: 250px; /* 사이드 메뉴 너비만큼 여백 추가 */
+  --background: #e8afff; /* 툴바 배경색 */
   --color: white; /* 툴바 글자색 */
+}
+
+app-sidemenu {
+  width: 250px; /* 사이드 메뉴의 너비 */
 }
