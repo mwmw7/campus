@@ -1,7 +1,9 @@
 
 :host {
   display: block; /* 블록 요소로 설정 */
-  width: 250px; /* 너비 설정 */
+  width: 15vw; /* 화면의 10% 너비 설정 */
+  max-width: 300px; /* 최대 너비 300px 설정 */
+  min-width: 150px;
   height: 100%; /* 전체 높이 설정 */
   background-color: #f8f9fa; /* 배경색 설정 */
   position: fixed; /* 고정 위치 */
@@ -9,7 +11,6 @@
   top: 0; /* 상단 정렬 */
   z-index: 1000; /* 다른 요소 위에 표시 */
 }
-
 .item-native .item-inner {
   border: none; /* 테두리 없애기 */
 }
@@ -49,4 +50,9 @@
 // 기본값 테두리 지우기
 ion-item {
   --border-style: none; /* border 스타일 제거 */
+}
+
+// 클릭한 글자의 색으 바꾸는 css
+.selected-item {
+  background-color: lightgray; /* 원하는 회색으로 변경 */
 }
