@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ClassmyPageRoutingModule } from './classmy-routing.module';
+import { ProjectsearchPageRoutingModule } from './projectsearch-routing.module';
 
-import { ClassmyPage } from './classmy.page';
+import { ProjectsearchPage } from './projectsearch.page';
 import {SidemenuComponent} from "../sidemenucomponent/sidemenu.component";
 
 @NgModule({
@@ -14,9 +14,9 @@ import {SidemenuComponent} from "../sidemenucomponent/sidemenu.component";
     CommonModule,
     FormsModule,
     IonicModule,
-    ClassmyPageRoutingModule,
+    ProjectsearchPageRoutingModule,
     SidemenuComponent
   ],
-  declarations: [ClassmyPage]
+  declarations: [ProjectsearchPage]
 })
-export class ClassmyPageModule {}
+export class ProjectsearchPageModule {}

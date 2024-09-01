@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import {RouterLink, RouterLinkActive} from "@angular/router";
 import {NgForOf} from "@angular/common";
+import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-sidemenu',
@@ -11,20 +13,28 @@ import {NgForOf} from "@angular/common";
     IonicModule,
     RouterLink,
     NgForOf,
-    RouterLinkActive
+    RouterLinkActive,
+    CommonModule,
   ],
   standalone: true
 })
 export class SidemenuComponent {
-  public appPages = [
-    { title: '홈', url: '/studyroommain', icon: 'mail' },
-    { title: '강의', url: '/folder/outbox', icon: 'paper-plane' },
-    { title: '프로젝트', url: '/folder/favorites', icon: 'heart' }
-  ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
-  constructor() {}
+  classesVisible = false;
+  projectsVisible = false;
 
-  ngOnInit() {}
+
+  constructor(private router: Router) {}
+
+  toggleClasses() {
+    this.classesVisible = !this.classesVisible;
+  }
+  toggleProjects() {
+    this.projectsVisible = !this.projectsVisible;
+  }
+
+  navigateTo(page: string) {
+    this.router.navigate([page, { animated: false }]);
+  }
 }
 
 
