@@ -33,7 +33,7 @@ export class SidemenuComponent {
   }
 
   navigateTo(page: string) {
-    this.router.navigate([page, { animated: false }]);
+    this.router.navigate([page]);
   }
 }
 

@@ -1,60 +1,85 @@
-
-ion-content {
-  padding-left: 250px; /* 사이드 메뉴 너비만큼 패딩 추가 */
-}
-
-
-//파일 전역 디자인
-ion-item{
-  margin: 12px;
-  color: #555555;
-
-}
-
-ion-icon{
-  margin: 10px;
-}
-
-ion-label.title{
+ion-card-title{
   font-family: "pretendard-B", serif;
 }
 
 
-/* 선택된 메뉴 항목의 스타일 */
-ion-item.selected {
-  --background: #DEE5FF; /* 선택된 항목의 배경색을 회색으로 설정 */
-  color: #5572E2; /* 텍스트 색상 설정 */
+
+.topbar {
+  margin-left: max(15vw, 200px); /* 15vw와 200px 중 큰 값을 사용 */
+  margin-right: 0; /* 오른쪽 마진 */
+  border: #9e65ff solid 2px;
+}
+
+.main-container {
+  margin-left: max(15vw, 200px); /* 15vw와 200px 중 큰 값을 사용 */
+  border: #6591ff solid 2px;
+  height: 100%;
+  background-color: #EDF1F7;
+  display: flex; /* Flexbox를 사용 */
+  flex-direction: column; /* 세로 방향으로 설정 */
+  max-width: 2000px;
+}
+
+/* 새로운 클래스 추가 */
+.attendance-container {
+  display: flex; /* 가로로 배치할 컨테이너 */
+  flex: 1; /* 동일한 비율로 크기 조정 */
+}
+
+.attendance, .blank {
+  display: flex; /* Flexbox로 가로 배치 */
+  flex: 1; /* 두 div가 동일한 비율로 크기를 가질 수 있도록 설정 */
+  border: #9e65ff solid 2px;
+}
+
+.content-box{
+  width: 35vw;
+  height: 30vh;
+  margin: auto;
+  max-width: 900px;
+  min-width: 500px;
+}
+
+.blank {
+  border: #ff65bc solid 2px;
+}
+
+.class-project {
+  border: #65faff solid 2px;
+  height: 50vh;
+  display: flex;
+}
+
+.class-project2{
+  background-color: #3b6bb1;
+  width: 76vw;
+  height: 20vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
   border-radius: 10px;
 }
 
-ion-item.selected:hover{
-  color: #ff4141;
-}
-
-ion-item:hover{
-  color: #ff4141;
-}
-
-.selected ion-icon {
-  color: #5572E2;
-}
-
-
-.split-main{
-  min-width: 180px;
-  width: 250px;
-}
-
-#inbox-list{
-  //text-align: center;
+.bottom-box{
+  width: 70vw;
+  height: 20vh;
+  margin-left: auto;
+  margin-right: auto;
+  align-content: center;
+  max-width: 1900px;
+  min-width: 500px;
 
 }
 
-#logo{
-  width: 80px;
-  margin-left: 30px;
-  margin-bottom: 40px;
-}
-#main-content{
-  background-color: #6d62fd;
+
+.circle {
+  width: 100px; /* 원의 너비 */
+  height: 100px; /* 원의 높이 */
+  background-color: black; /* 배경색 */
+  border-radius: 50%; /* 원을 만들기 위해 */
+  display: flex; /* 중앙 정렬을 위해 Flexbox 사용 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  color: white; /* 글자 색상 */
+  font-size: 18px; /* 글자 크기 */
 }
