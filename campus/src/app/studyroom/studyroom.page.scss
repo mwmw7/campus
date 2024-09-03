@@ -4,21 +4,39 @@ ion-card-title{
 
 
 
-.topbar {
-  margin-left: max(15vw, 200px); /* 15vw와 200px 중 큰 값을 사용 */
-  margin-right: 0; /* 오른쪽 마진 */
-  border: #9e65ff solid 2px;
+
+ion-content {
+  height: 100vh; /* 전체 높이를 100%로 설정 */
 }
 
+.layout {
+  display: flex; /* Flexbox 사용 */
+  height: 100%; /* 전체 높이를 100%로 설정 */
+}
+
+.sidemenu {
+  display: block; /* 또는 inline-block */
+  min-width: 250px; /* 사이드 메뉴의 너비 설정 */
+  max-width: 400px;
+  width: 20vw;
+  border-right: #9e65ff solid 2px; /* 경계선 */
+}
+
+.content-wrapper {
+  flex-grow: 1; /* 남은 공간을 차지하도록 설정 */
+  overflow: auto; /* 콘텐츠가 넘칠 경우 스크롤 가능하도록 설정 */
+}
+
+
 .main-container {
-  margin-left: max(15vw, 200px); /* 15vw와 200px 중 큰 값을 사용 */
   border: #6591ff solid 2px;
   height: 100%;
   background-color: #EDF1F7;
-  display: flex; /* Flexbox를 사용 */
   flex-direction: column; /* 세로 방향으로 설정 */
   max-width: 2000px;
+  display: flex; /* Flexbox를 사용 */
 }
+
 
 /* 새로운 클래스 추가 */
 .attendance-container {
