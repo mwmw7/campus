@@ -3,11 +3,7 @@ ion-card-title{
   color: #464646;
 }
 
-hr {
-  width : 90%;
-  border-bottom: 3px solid;
-  color: #E2E2E2;
-}
+
 
 
 
@@ -55,18 +51,51 @@ ion-content {
   flex: 1; /* 두 div가 동일한 비율로 크기를 가질 수 있도록 설정 */
   border: #9e65ff solid 2px;
 }
+.attendance ion-card-header{
+  padding-left: 30px;
+  padding-bottom: 10px;
+  padding-top: 30px;
+}
+
+hr {
+  width : 90%;
+  border-bottom: 3px solid;
+  color: #E2E2E2;
+}
+
+.attendance ion-card-content {
+  display: flex;
+  flex-direction: column; /* 세로 방향으로 정렬 */
+  align-items: center; /* 가운데 정렬 */
+  justify-content: center; /* 중앙 정렬 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  height: 80%; /* 전체 높이를 사용하도록 설정 */
+}
+
+.attendance ion-card-content .attendance-button{
+  --background-color: #976BEE;
+}
 
 .attendance .qrcode{
-  font-size: 7vw;
+  font-size: min(max(50px, 15vw), 150px);
   color: #333333;
-  margin: auto;
 }
 
 .attendance .current-time{
-  font-size: 20px;
+  font-size: 16px;
   font-family: "pretendard-B", serif;
   text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: black;
 }
+
+.attendance .attendance-button{
+  width: 60%;
+  height: 20%;
+  font-size: 20px;
+}
+
 
 .content-box{
   width: 35vw;
