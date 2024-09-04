@@ -6,13 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./studyroom.page.scss'],
 })
 export class StudyroomPage implements OnInit {
-  public appPages = [
-    { title: '홈', url: '/studyroom/page/home', icon: 'home' },
-    { title: '강의', url: '/studyroom/page/room', icon: 'paper-plane' },
-    { title: '프로젝트', url: '/studyroom/page/project', icon: 'heart' },
-  ];
+  currentDate: string;
 
-  constructor() { }
+  constructor() {
+    const now = new Date();
+    this.currentDate = `${now.getFullYear()}년 ${now.getMonth() + 1}월 ${now.getDate()}일 ${now.getHours()}시 ${now.getMinutes()}분`;
+  }
+
 
   ngOnInit() {
   }
