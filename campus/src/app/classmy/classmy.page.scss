@@ -1,0 +1,29 @@
+.sidemenu {
+  display: block;
+  min-width: 250px;
+  max-width: 400px;
+  width: 20vw;
+  border-right: #9e65ff solid 2px;
+}
+
+.layout {
+  display: flex;
+  height: 100%;
+}
+
+
+.content-wrapper {
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.main-container {
+  border: #6591ff solid 2px;
+  height: 100%;
+  background-color: #EDF1F7;
+  flex-direction: column; /* 세로 방향으로 설정 */
+  max-width: 2000px;
+  display: flex; /* Flexbox를 사용 */
+}
+
+//^^^^기본 셋팅
