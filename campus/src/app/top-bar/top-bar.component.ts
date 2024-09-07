@@ -1,5 +1,3 @@
-// top-bar.component.ts
-
 import {Component, OnInit} from '@angular/core';
 import {IonicModule} from '@ionic/angular';
 import {RouterLink, RouterLinkActive} from "@angular/router";
@@ -26,18 +24,17 @@ export class TopBarComponent implements OnInit {
   constructor(
     private modalController: ModalController,
     private authService: AuthService,
-  ) {
-  }
+  ) {}
 
   ngOnInit() {
     this.authService.isLoggedIn.subscribe(status => {
       console.log('로그인 상태:', status);
-      this.isLoggedIn = status;
+      this.isLoggedIn = status;  // 로그인 상태가 변경될 때 업데이트
     });
   }
 
   logout() {
-    this.authService.logout_current();
+    this.authService.logout_current();  // 로그아웃 호출
   }
 
   async openModal() {
