@@ -10,12 +10,13 @@
           <div class="attendance">
             <ion-card class="content-box attendance-box">
               <ion-card-header>
-                <ion-card-title>출석체크</ion-card-title>
-                <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+                <ion-card-title>출석 / 출결관리</ion-card-title>
               </ion-card-header>
-
+              <hr />
               <ion-card-content>
-                Here's a small text description for the card content. Nothing more, nothing less.
+                <ion-icon class="qrcode" name="qr-code-outline"></ion-icon>
+                <p class="current-time">{{ currentDate }}</p>
+                <ion-button class="attendance-button">출결진행</ion-button>
               </ion-card-content>
             </ion-card>
           </div>
