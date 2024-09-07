@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';  // 로그인 서비스
 import {AlertController, ModalController} from '@ionic/angular';
 import {JoinModalComponent} from "../join-modal/join-modal.component";
+import { firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-loginpage',
@@ -13,6 +14,7 @@ import {JoinModalComponent} from "../join-modal/join-modal.component";
 export class LoginpagePage implements OnInit {
   loginForm!: FormGroup;
   userRole: string | undefined;
+  showPassword = false; // 비밀번호 보기 상태를 나타내는 변수
 
   constructor(
     private fb: FormBuilder,
@@ -24,7 +26,7 @@ export class LoginpagePage implements OnInit {
 
   ngOnInit() {
     this.loginForm = this.fb.group({
-      username: ['', Validators.required],
+      Id: ['', Validators.required],
       password: ['', Validators.required]
     });
   }
@@ -33,20 +35,30 @@ export class LoginpagePage implements OnInit {
     if (this.loginForm.valid) {
       try {
         // 로그인 요청
-        const response = await this.authService.login(this.loginForm.value).toPromise();
+        const response = await firstValueFrom(this.authService.login(this.loginForm.value));
 
-        // JWT 토큰을 로컬 스토리지에 저장
-        localStorage.setItem('token', response.token);
+        // 서버 응답을 로그로 출력하여 확인
+        console.log('응답 데이터:', response);
 
-        // 로그인 상태 업데이트
-        this.authService.login_current(response.token);
+        // JWT 토큰을 로컬 스토리지에 저장 (response.token 대신 response에서 올바른 토큰 경로 확인)
+        if (response && response.token) {
+          localStorage.setItem('token', response.token);
+          console.log('토큰:', response.token);
 
-        // 성공 알림
-        await this.showAlert('로그인 성공', '로그인이 성공적으로 완료되었습니다.');
+          // 로그인 상태 업데이트
+          this.authService.login_current(response.token);
 
-        // 메인 페이지로 이동
-        this.router.navigate(['main']);
+          // 성공 알림
+          await this.showAlert('로그인 성공', '로그인이 성공적으로 완료되었습니다.');
+          console.log("Success alert shown");
+
+          // 메인 페이지로 이동
+          this.router.navigate(['main']);
+        } else {
+          throw new Error('토큰이 응답에 없습니다.');
+        }
       } catch (error) {
+        console.error('로그인 오류:', error);
         // 실패 알림
         await this.showAlert('로그인 실패', '아이디 또는 비밀번호가 틀렸습니다.');
       }
@@ -84,6 +96,12 @@ export class LoginpagePage implements OnInit {
       cssClass: "modal"
     });
 
+
     return await modal.present();
+  }
+
+  // 비밀번호 보기 토글 메서드
+  togglePasswordVisibility() {
+    this.showPassword = !this.showPassword;
   }
 }
