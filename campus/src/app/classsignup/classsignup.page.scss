@@ -47,8 +47,11 @@ h1, h2, h3, h4, h6{
   margin:0 ;
 }
 
-h2{
+h4, h2{
   font-family: "pretendard-B", serif;
+}
+
+h2{
   font-size: 200%;
 }
 
@@ -65,14 +68,20 @@ hr{
 
 ////hr 아래
 
-.class1{
-  padding: 2%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  background-color: #F8F8F8;
+ion-col{
   align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 22px;
+  font-family: "pretendard-B", serif;
+}
+
+.class1{
+  padding: 40px;
+  background-color: #F8F8F8;
   border-radius: 10px;
   border: 1px solid #D6D6D6;
+  width: 100%;
 }
 
 .project-box{
@@ -81,4 +90,21 @@ hr{
   margin: 10px;
   gap: 10px;
 
+}
+
+.join-btn{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.col{
+  justify-content: flex-start;
+}
+
+.class-title{
+  flex-direction: column;
+}
+.class-team{
+  font-family: "pretendard-R", serif;
+  justify-content: flex-start;
 }
