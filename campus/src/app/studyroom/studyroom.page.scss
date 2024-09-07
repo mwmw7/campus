@@ -71,6 +71,7 @@ hr {
   justify-content: center; /* 중앙 정렬 */
   text-align: center; /* 텍스트 중앙 정렬 */
   height: 80%; /* 전체 높이를 사용하도록 설정 */
+
 }
 
 .attendance ion-card-content .attendance-button{
@@ -78,7 +79,7 @@ hr {
 }
 
 .attendance .qrcode{
-  font-size: min(max(50px, 15vw), 70px);
+  font-size: min(max(50px, 10vw), 150px);
   color: #333333;
 }
 
@@ -93,7 +94,7 @@ hr {
 
 .attendance .attendance-button{
   width: 60%;
-  height: 20%;
+  height: 15%;
   font-size: 20px;
 }
 
