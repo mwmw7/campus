@@ -108,3 +108,22 @@ ion-col{
   font-family: "pretendard-R", serif;
   justify-content: flex-start;
 }
+
+.class-create{
+  display: flex;
+  justify-content: space-between;
+
+  .create-btn{
+
+    --color: #7B7B7B;
+    --border-radius: 10px;
+    --border-color: #aeaeae;
+    --border-style: solid;
+    --border-width: 1.5px;
+    --padding-bottom:3px;
+    --padding-top:3px;
+
+    font-size: 15px;
+
+  }
+}
