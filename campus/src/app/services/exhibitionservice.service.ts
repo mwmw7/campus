@@ -46,3 +46,6 @@ export class ExhibitionService {
     return this.http.post(this.apiUrl, form);
   }
 }
+
+export class ExhibitionserviceService {
+}
