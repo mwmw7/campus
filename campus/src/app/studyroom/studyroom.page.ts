@@ -1,4 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { AttendanceModalComponent } from '../attendance-modal/attendance-modal.component';
 
 @Component({
   selector: 'app-studyroom',
@@ -9,8 +11,15 @@ export class StudyroomPage implements OnInit, OnDestroy {
   currentDate: string | undefined;
   private intervalId: any;
 
-  constructor() {
+  constructor(private modalController: ModalController) {
     this.updateTime();
+  }
+
+  async openModal() {
+    const modal = await this.modalController.create({
+      component: AttendanceModalComponent,
+    });
+    return await modal.present();
   }
 
   ngOnInit() {
@@ -31,4 +40,6 @@ export class StudyroomPage implements OnInit, OnDestroy {
     const now = new Date();
     this.currentDate = `${now.getFullYear()}년 ${now.getMonth() + 1}월 ${now.getDate()}일 ${now.getHours()}시 ${now.getMinutes()}분`;
   }
+
+
 }

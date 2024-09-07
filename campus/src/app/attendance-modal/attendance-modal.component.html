@@ -1,3 +1,13 @@
-<p>
-  attendance-modal works!
-</p>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>출석 확인</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">닫기</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p>출석을 진행하시겠습니까?</p>
+  <ion-button expand="full" (click)="closeModal()">확인</ion-button>
+</ion-content>
