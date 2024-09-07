@@ -74,12 +74,15 @@ hr {
 
 }
 
-.attendance ion-card-content .attendance-button{
-  --background-color: #976BEE;
+.attendance-button {
+  color: white; /* 텍스트 색상 (필요시) */
+  --background: #7269EE; /* Ionic의 CSS 변수를 사용하여 배경색 설정 */
+  font-family: "pretendard-B", serif;
 }
 
+
 .attendance .qrcode{
-  font-size: max(min(50px, 15vw), 150px);
+  font-size: clamp(70px, 7vw, 150px);
   color: #333333;
 }
 

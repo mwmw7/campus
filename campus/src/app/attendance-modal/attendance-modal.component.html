@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>출석 확인</ion-title>
+    <ion-title>수업 출석 진행</ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="closeModal()">닫기</ion-button>
     </ion-buttons>
@@ -8,6 +8,10 @@
 </ion-header>
 
 <ion-content>
-  <p>출석을 진행하시겠습니까?</p>
-  <ion-button expand="full" (click)="closeModal()">확인</ion-button>
+  <div class="image"><img src="assets/svg/Calendar.svg"></div>
+  <div class="comment1">QR 코드를 통해 출석을 진행합니다.</div>
+  <div class="comment2">출석일 : <span class="current-time">{{ currentDate2 }}</span></div>
+  <div class="image"><img class="qrcode" src="assets/svg/qrcode.svg"></div>
+  <div class="comment3">남은 시간 : <span class="remain-time">{{ formattedTime }}</span></div>
+  <ion-button class="button" (click)="closeModal()">확인</ion-button>
 </ion-content>
