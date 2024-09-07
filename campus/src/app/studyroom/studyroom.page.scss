@@ -79,7 +79,7 @@ hr {
 }
 
 .attendance .qrcode{
-  font-size: min(max(50px, 10vw), 150px);
+  font-size: max(min(50px, 15vw), 150px);
   color: #333333;
 }
 
