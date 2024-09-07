@@ -14,6 +14,7 @@ import { firstValueFrom } from 'rxjs';
 export class LoginpagePage implements OnInit {
   loginForm!: FormGroup;
   userRole: string | undefined;
+  showPassword = false; // 비밀번호 보기 상태를 나타내는 변수
 
   constructor(
     private fb: FormBuilder,
@@ -25,7 +26,7 @@ export class LoginpagePage implements OnInit {
 
   ngOnInit() {
     this.loginForm = this.fb.group({
-      username: ['', Validators.required],
+      Id: ['', Validators.required],
       password: ['', Validators.required]
     });
   }
@@ -95,6 +96,12 @@ export class LoginpagePage implements OnInit {
       cssClass: "modal"
     });
 
+
     return await modal.present();
+  }
+
+  // 비밀번호 보기 토글 메서드
+  togglePasswordVisibility() {
+    this.showPassword = !this.showPassword;
   }
 }
