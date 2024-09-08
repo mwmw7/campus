@@ -78,6 +78,10 @@ const routes: Routes = [
     path: 'projectmy',
     loadChildren: () => import('./projectmy/projectmy.module').then( m => m.ProjectmyPageModule)
   },
+  {
+    path: 'introduce-metaverse',
+    loadChildren: () => import('./introduce-metaverse/introduce-metaverse.module').then( m => m.IntroduceMetaversePageModule)
+  },
 
 
 
