@@ -41,8 +41,6 @@ export class LoginpagePage implements OnInit {
       console.log('서버 응답:', response); // 서버 응답 로그
 
       if (response && response.token) {
-        // 로그인 성공 시, 받은 JWT 토큰을 로컬 스토리지에 저장합니다.
-        localStorage.setItem('token', response.token);
 
         // AuthService의 login_current 메서드를 호출하여 로그인 상태를 업데이트합니다.
         this.authService.login_current(response.token);

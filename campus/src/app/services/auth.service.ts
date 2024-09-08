@@ -9,7 +9,7 @@ import { tap } from 'rxjs/operators';
 export class AuthService {
   private loggedIn = new BehaviorSubject<boolean>(false);
   isLoggedIn = this.loggedIn.asObservable();
-  private apiUrl = 'http://localhost:3000/users';
+  private apiUrl = 'http://localhost:3000';
 
   constructor(private http: HttpClient) {
     // 초기 로그인 상태 설정
@@ -43,7 +43,7 @@ export class AuthService {
 
   // 사용자 로그인 메서드
   login(credentials: any): Observable<any> {
-    return this.http.post<{ token: string }>(`${this.apiUrl}/login`, credentials)
+    return this.http.post<{ token: string }>(`${this.apiUrl}/auth/login`, credentials)
       .pipe(
         tap(response => {
           console.log('로그인 응답:', response);
