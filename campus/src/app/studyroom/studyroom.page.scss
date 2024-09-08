@@ -28,6 +28,7 @@ ion-content {
 .content-wrapper {
   flex-grow: 1; /* 남은 공간을 차지하도록 설정 */
   overflow: auto; /* 콘텐츠가 넘칠 경우 스크롤 가능하도록 설정 */
+
 }
 
 .main-container {
@@ -37,30 +38,27 @@ ion-content {
   display: flex; /* Flexbox를 사용 */
 }
 
+.main-container2 {
+  width: 80%;
+  margin: auto;
+}
+
 .top-container {
+  width: 100%;
   display: flex; /* 가로로 배치 */
   align-items: center; /* 세로 중앙 정렬 */
-  justify-content: center; /* 수평 중앙 정렬 */
+  justify-content: space-between;
   margin-top: 100px;
   flex-wrap: wrap; /* 요소가 겹치면 다음 줄로 내려가도록 설정 */
 }
 
-.attendance {
-  width: 35vw; /* 고정 너비 설정 */
-  max-width: 600px;
-}
 
-.blank {
-  width: 35vw; /* 고정 너비 설정 */
-  max-width: 600px;
-}
 
 .attendance, .blank {
-  width: 100%; /* 기본적으로 100% 너비 사용 */
-  max-width: 700px; /* 최대 너비 600px */
+  width: 50%;
+  max-width: 800px; /* 최대 너비 600px */
   min-width: 300px; /* 최소 너비 300px */
   box-sizing: border-box; /* 패딩과 테두리를 포함한 너비 계산 */
-
 }
 
 
@@ -115,11 +113,10 @@ hr {
 
 .content-box {
   height: 35vh;
-  margin: auto;
-  max-width: 600px;
-  min-width: 500px;
+  min-width: 300px;
   min-height: 300px;
   max-height: 500px;
+  margin: 0;
 }
 
 .class-project {
@@ -144,7 +141,6 @@ hr {
   height: 15vh;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1300px;
   min-width: 500px;
   min-height: 100px;
   max-height: 200px;
