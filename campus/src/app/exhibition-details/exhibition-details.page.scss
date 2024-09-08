@@ -18,6 +18,39 @@
   width: 100%;
   height: 350px;
   background: linear-gradient(213deg, #FDF2FF 0%, #E9F1FF 100%);
+  display: flex;
+  flex-direction: row; /* 수평 배열 */
+  align-items: center; /* 세로 중앙 정렬 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  margin-bottom: 50px;
+}
+
+
+.part1 {
+  display: flex;
+}
+
+.title-image {
+  width: 300px;
+  height: 185px;
+  border-radius: 10px;
+}
+
+.part2 {
+  height: 185px;
+  flex-direction: column; /* 수직 배열로 변경 */
+  justify-content: center; /* 중앙 정렬 */
+  margin-left: 30px; /* 간격 추가 (선택 사항) */
+}
+
+.part2 .project-name{
+  font-family: 'pretendard-B', serif;
+  font-size: 32px;
+}
+
+.part2 .team-name{
+  font-family: "pretendard-R", serif;
+  font-size: 24px;
 }
 
 .maincontent {
