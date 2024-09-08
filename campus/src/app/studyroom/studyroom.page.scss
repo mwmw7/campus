@@ -49,16 +49,19 @@ ion-content {
   align-items: center; /* 세로 중앙 정렬 */
   justify-content: space-between;
   margin-top: 100px;
-  flex-wrap: wrap; /* 요소가 겹치면 다음 줄로 내려가도록 설정 */
 }
 
 
 
 .attendance, .blank {
   width: 50%;
-  max-width: 800px; /* 최대 너비 600px */
+  max-width: 750px; /* 최대 너비 600px */
   min-width: 300px; /* 최소 너비 300px */
   box-sizing: border-box; /* 패딩과 테두리를 포함한 너비 계산 */
+}
+
+.attendance{
+  margin-right: 30px;
 }
 
 
@@ -141,13 +144,17 @@ hr {
   height: 15vh;
   margin-left: auto;
   margin-right: auto;
-  min-width: 500px;
+  min-width: 630px;
   min-height: 100px;
   max-height: 200px;
   border-radius: 15px;
 }
 .process-icon{
   height: 90%;
+}
+
+.process-icon{
+  height: 70%;
 }
 
 
