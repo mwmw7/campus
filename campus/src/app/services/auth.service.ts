@@ -18,16 +18,19 @@ export class AuthService {
 
   private checkInitialLoginStatus() {
     // 로컬 스토리지에 토큰이 있으면 로그인 상태를 true로 설정
+    console.log('true');
     this.loggedIn.next(!!localStorage.getItem('token'));
   }
 
   login_current(token: string) {
-    // 토큰을 로컬 스토리지에 저장하고 로그인 상태를 true로 설정
+    console.log('토큰 저장 및 로그인 상태 업데이트:', token);  // 디버깅용 로그
     localStorage.setItem('token', token);
-    this.loggedIn.next(true);
+    this.loggedIn.next(true);  // 로그인 상태를 true로 변경
   }
 
+
   logout_current() {
+    alert('false');
     // 로컬 스토리지에서 토큰을 제거하고 로그인 상태를 false로 설정
     localStorage.removeItem('token');
     this.loggedIn.next(false);
@@ -40,12 +43,14 @@ export class AuthService {
 
   // 사용자 로그인 메서드
   login(credentials: any): Observable<any> {
-    return this.http.post<{ token: string }>(`${this.apiUrl}/login`, credentials, { withCredentials: true })
+    return this.http.post<{ token: string }>(`${this.apiUrl}/login`, credentials)
       .pipe(
         tap(response => {
-          // 로그인 성공 시 토큰을 저장하고 로그인 상태를 true로 설정
-          this.login_current(response.token);
+          console.log('로그인 응답:', response);
+          this.login_current(response.token); // 토큰 저장 및 상태 업데이트
         })
       );
   }
+
+
 }

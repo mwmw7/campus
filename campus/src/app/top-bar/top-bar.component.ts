@@ -5,6 +5,7 @@ import {CommonModule} from '@angular/common';
 import {ModalController} from '@ionic/angular';
 import {AuthService} from '../services/auth.service';
 import {JoinModalComponent} from "../join-modal/join-modal.component";
+import { ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-top-bar',
@@ -19,17 +20,19 @@ import {JoinModalComponent} from "../join-modal/join-modal.component";
   ],
 })
 export class TopBarComponent implements OnInit {
-  isLoggedIn = false;
+  isLoggedIn = true;
 
   constructor(
     private modalController: ModalController,
     private authService: AuthService,
+    private changeDetector: ChangeDetectorRef  // ChangeDetectorRef 추가
   ) {}
 
   ngOnInit() {
     this.authService.isLoggedIn.subscribe(status => {
       console.log('로그인 상태:', status);
-      this.isLoggedIn = status;  // 로그인 상태가 변경될 때 업데이트
+      this.isLoggedIn = status;
+      this.changeDetector.detectChanges();  // 강제로 변경 사항 감지
     });
   }
 
