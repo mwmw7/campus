@@ -1,0 +1,248 @@
+@import "global";
+button{
+  cursor: pointer;
+}
+
+
+ion-menu-button {
+  color: var(--ion-color-primary);
+}
+
+#logo{
+  width: 80px;
+  margin: 10px;
+  justify-content: center;
+}
+
+#button-logo{
+  background: white;
+  display: flex;
+  align-items: center;
+  height: 70px;
+}
+
+#container {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+
+
+ion-toolbar{
+  display: flex;
+  //--box-shadow: none;
+  padding:5px;
+  justify-content: center;
+  align-content: center;
+
+}
+
+#logo-text {
+  color: #976BEE;
+  width: 150px;
+  word-wrap: break-word;
+  //display: flex;
+  text-align: left;
+  font-size: 15px;
+  text-transform: none; /* 대문자 변환 방지 */
+  letter-spacing: -1px;
+}
+
+
+ion-searchbar.title-searchbar{
+  --border-radius: 50px;
+  --background: #f4f5fb;
+  --box-shadow: none;
+  width: 50%;
+  max-width: 30%;
+  display: flex;
+  justify-content: right;
+
+}
+
+//로그인 버튼
+
+ion-button.login{
+  --color: #000000;
+}
+
+.login:hover, .login:active{
+  --color:#9e65ff;
+  --background-color: #976BEE;
+  --background-hover: transparent; /* 기본 hover 배경 투명 */
+}
+
+//메뉴
+.secondpageBtn{
+  background-color: white;
+  cursor: pointer;
+}
+
+
+
+
+ion-header{
+  --box-shadow: none;
+}
+
+#inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  //margin: 0px 20px;
+}
+
+.menu-left{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+
+}
+
+ion-label{
+  margin:0 10px;
+  font-weight: bold;
+}
+
+.title-text{
+  color: #000000;
+  --font-weight: 900;
+  font-size: 18px;
+  letter-spacing: -1px;
+}
+
+.title-text:hover{
+  color: #6d62fd;
+  --font-weight: 900;
+}
+
+ion-label:hover{
+  --color: #9e65ff;
+}
+
+.menu-right{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+}
+
+//회원가입
+//모달
+ion-modal{
+  --border-radius: 22px;
+  --box-shadow: none;
+  --height: 490px;
+  --width: 580px;
+
+}
+
+.join-title{
+  font-size: 15px;
+
+}
+
+.join-Big-title{
+  font-family: "pretendard-B", serif;
+  font-size:22px;
+  color: #353B77;
+
+}
+
+.modal-toolbar {
+  padding: 30px;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.close-btn{
+  position: absolute;
+  right:20px;
+  margin-top: 10px;
+  background-color: white;
+
+}
+
+.modal-content {
+  --padding-start: 0;
+  --padding-end: 0;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.center-title {
+  text-align: center;
+  width: 100%;
+}
+
+.toolbar-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.user-rule {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+  margin-top: 20px;
+  border: dotted 2px #BFBFBF;
+  border-radius: 27px;
+
+  width: 440px;
+  height: 220px;
+  padding: 10px;
+}
+
+.user-rule-btn{
+  width: 300px;
+  height: 200px;
+
+  background-color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  border-radius: 22px;
+  border: 1.5px solid #AAAAAA;
+
+  display: flex;
+  flex-direction: column;
+
+  cursor: pointer;
+
+}
+
+button{
+  cursor: pointer;
+}
+
+.user-rule-title{
+  margin: 5px;
+  font-size: 20px;
+  font-family: pretendard-B, serif;
+
+
+}
+
+.custom-modal{
+  --border-radius: 50px;
+}
