@@ -38,7 +38,7 @@ export class AuthService {
 
   // 사용자 등록 메서드
   register(userData: any): Observable<any> {
-    return this.http.post(`${this.apiUrl}/register`, userData);
+    return this.http.post(`${this.apiUrl}/users/register`, userData);
   }
 
   // 사용자 로그인 메서드
