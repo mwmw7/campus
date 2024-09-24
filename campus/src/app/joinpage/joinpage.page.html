@@ -56,7 +56,10 @@
           <ion-input formControlName="user_name" color="none" placeholder="이름을 입력해주세요"></ion-input>
         </div>
 
-        <div class="title-login">이메일</div>
+        <div class="input-content">
+          <div class="title-login">이메일</div>
+          <div class="input-description">사용하고 있는 이메일은 재사용불가입니다.</div>
+        </div>
         <div class="input-login">
           <ion-input formControlName="email" type="email" color="none" placeholder="이메일 주소"></ion-input>
         </div>
@@ -65,7 +68,7 @@
 
       </div>
       <div style="height: 15px;"></div>
-      <ion-button class="btn-login" type="submit" [disabled]="registerForm.invalid">회원가입</ion-button>
+      <ion-button class="btn-login" type="submit" >회원가입</ion-button>
     </form>
 
     <button routerLink="/main" style="color: #939393; background-color: white; margin: 10px; font-size:12px">
