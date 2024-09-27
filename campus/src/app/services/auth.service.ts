@@ -11,6 +11,7 @@ export class AuthService {
   isLoggedIn = this.loggedIn.asObservable();
   private userApiUrl = 'http://localhost:3000/users';
   private courseApiUrl = 'http://localhost:3000/courses'; // 강의 관련 API URL
+  private authApiUrl = 'http://localhost:3000/auth';
 
   constructor(private http: HttpClient) {
     // 초기 로그인 상태 설정
@@ -41,7 +42,7 @@ export class AuthService {
 
   // 사용자 로그인 메서드
   login(credentials: any): Observable<any> {
-    return this.http.post<{ token: string }>(`${this.userApiUrl}/login`, credentials, { withCredentials: true })
+    return this.http.post<{ token: string }>(`${this.authApiUrl}/login`, credentials, { withCredentials: true })
       .pipe(
         tap(response => {
           // 로그인 성공 시 토큰을 저장하고 로그인 상태를 true로 설정
