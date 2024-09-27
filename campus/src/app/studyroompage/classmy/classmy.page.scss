@@ -12,9 +12,13 @@
 }
 
 
-.content-wrapper {
+.lecture-content .content-wrapper {
   flex-grow: 1;
   overflow: auto;
+  align-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-container {
@@ -69,8 +73,11 @@ div.box-title{
   box-shadow: 0 0 10px #c5c5c5;
   width: 100%;
   margin:100px 200px;
+  margin-bottom:10px;
   flex-direction: column;
   text-align: left;
+  min-width:500px;
+
 }
 
 .lecture-title{
@@ -86,7 +93,70 @@ span.lecture-rule{
   place-items: center;
 }
 
+
+ul{
+  list-style: none;
+}
+
 hr{
   height: 10px;
   border-top: 1px solid #878787;
+  width: 100% !important;
+}
+
+
+/*상세메뉴 스타일*/
+.lecture-page{
+  min-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lecture-page > *{
+  width: 60%;
+}
+
+.lecture-page .detail-menu{
+  display: flex;
+}
+
+.lecture-page #lecture-menu{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap:10px;
+  padding-left: 0;
+
+}
+
+.lecture-page #lecture-menu > li  {
+  cursor:pointer;
+  transition:color 0.3s;
+
+}
+
+.lecture-page #lecture-menu > li.active{
+  color: blue; /* 활성화된 버튼의 폰트 색상 */
+  font-family: pretendard-B, Serif;
+}
+
+.lecture-page #lecture-menu > li:not(.active){
+  color: gray;
+}
+
+
+/*강의목록 안에 있는 section*/
+.lecture-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.lecture-section > *{
+  display:flex;
+  width:60%;
+  justify-content: flex-start;
+}
+
+.lecture-section .lecture-title-des{
 }
