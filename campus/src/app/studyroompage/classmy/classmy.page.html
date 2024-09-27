@@ -30,8 +30,18 @@
         <span class="lecture-title-des">지난 날의 강의를 다시 복습할 수 있어요</span>
 
         <div>총 {{ courses.length }}강의</div>
-
         <ul id="lecture-item-list">
+          <li class="lecture-item-entire" >
+            <div class="create-btn"  >+</div>
+            <div class="lecture-item">
+              <span class="lecture-order">1</span>
+              <div>Spring</div>
+            </div>
+
+          </li>
+        </ul>
+
+        <ul id="lecture-item-list-1">
           <li class="lecture-item-entire" *ngFor="let title of courses; let i = index">
             <div class="create-btn">+</div>
             <div class="lecture-item">
@@ -48,7 +58,6 @@
           <button (click)="confirmCourse()">확인</button> <!-- 확인 버튼 추가 -->
         </div>
 
-        <div>memo</div>
 
 
       </div>
