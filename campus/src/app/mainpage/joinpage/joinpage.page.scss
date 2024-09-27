@@ -56,3 +56,17 @@ ion-input::placeholder{
 
 }
 
+.input-content{
+  display: flex;
+  align-items: center;
+}
+
+.input-content > *{
+  margin-right:10px;
+}
+
+.input-description{
+  display: flex;
+  font-size: 12px;
+  color: #757575;
+}
