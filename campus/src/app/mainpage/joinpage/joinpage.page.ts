@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/fo
 import { AlertController } from '@ionic/angular';
 import { AuthService } from '../../services/auth.service';
 import { Router } from "@angular/router";
+import { firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-joinpage',
@@ -63,7 +64,7 @@ export class JoinpagePage implements OnInit {
 
     if (this.registerForm.valid) {
       try {
-        const response = await this.authService.register(data).toPromise();
+        const response = await firstValueFrom(this.authService.register(data));
         console.log('회원가입 성공:', response);
 
         const alert = await this.alertController.create({
