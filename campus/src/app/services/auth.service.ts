@@ -9,7 +9,9 @@ import { tap } from 'rxjs/operators';
 export class AuthService {
   private loggedIn = new BehaviorSubject<boolean>(false);
   isLoggedIn = this.loggedIn.asObservable();
-  private apiUrl = 'http://localhost:3000';
+  private userApiUrl = 'http://localhost:3000/users';
+  private courseApiUrl = 'http://localhost:3000/courses'; // 강의 관련 API URL
+  private authApiUrl = 'http://localhost:3000/auth';
 
   constructor(private http: HttpClient) {
     // 초기 로그인 상태 설정
@@ -18,19 +20,16 @@ export class AuthService {
 
   private checkInitialLoginStatus() {
     // 로컬 스토리지에 토큰이 있으면 로그인 상태를 true로 설정
-    console.log('true');
     this.loggedIn.next(!!localStorage.getItem('token'));
   }
 
   login_current(token: string) {
-    console.log('토큰 저장 및 로그인 상태 업데이트:', token);  // 디버깅용 로그
+    // 토큰을 로컬 스토리지에 저장하고 로그인 상태를 true로 설정
     localStorage.setItem('token', token);
-    this.loggedIn.next(true);  // 로그인 상태를 true로 변경
+    this.loggedIn.next(true);
   }
 
-
   logout_current() {
-    alert('false');
     // 로컬 스토리지에서 토큰을 제거하고 로그인 상태를 false로 설정
     localStorage.removeItem('token');
     this.loggedIn.next(false);
@@ -38,18 +37,26 @@ export class AuthService {
 
   // 사용자 등록 메서드
   register(userData: any): Observable<any> {
-    return this.http.post(`${this.apiUrl}/users/register`, userData);
+    return this.http.post(`${this.userApiUrl}/register`, userData);
   }
 
   // 사용자 로그인 메서드
   login(credentials: any): Observable<any> {
-    return this.http.post<{ token: string }>(`${this.apiUrl}/auth/login`, credentials)
+    return this.http.post<{ token: string }>(`${this.authApiUrl}/login`, credentials, { withCredentials: true })
       .pipe(
         tap(response => {
-          console.log('로그인 응답:', response);
-          this.login_current(response.token); // 토큰 저장 및 상태 업데이트
+          // 로그인 성공 시 토큰을 저장하고 로그인 상태를 true로 설정
+          this.login_current(response.token);
         })
       );
+  }
+
+  // 강의 생성 메서드
+  createCourse(courseData: { course_title: string }): Observable<any> {
+    const token = localStorage.getItem('token'); // 로그인 시 저장한 토큰을 가져옴
+    const headers = { Authorization: `Bearer ${token}` }; // Authorization 헤더에 토큰 추가
+
+    return this.http.post(`${this.courseApiUrl}/register`, courseData, { headers });
   }
 
 

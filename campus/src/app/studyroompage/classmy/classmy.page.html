@@ -26,21 +26,44 @@
         <hr/>
       </section>
 
-      <div *ngIf="activeSection === 'lecture'"  [ngClass]="{ active: activeSection === 'lecture' }" class="lecture-section">
+      <div *ngIf="activeSection === 'lecture'"  [ngClass]="{ active: activeSection === 'lecture' }" class="active-section">
         <span class="lecture-title-des">지난 날의 강의를 다시 복습할 수 있어요</span>
 
-        <div>총 1강의</div>
+        <div>총 {{ courses.length }}강의</div>
+        <ul id="lecture-item-list">
+          <li class="lecture-item-entire" >
+            <div class="create-btn"  >+</div>
+            <div class="lecture-item">
+              <span class="lecture-order">1</span>
+              <div>Spring</div>
+            </div>
 
-        <ul>
-          <span>1</span>
-          <div>Spring</div>
+          </li>
         </ul>
 
-        <div>memo</div>
+        <ul id="lecture-item-list-1">
+          <li class="lecture-item-entire" *ngFor="let title of courses; let i = index">
+            <div class="create-btn">+</div>
+            <div class="lecture-item">
+              <span class="lecture-order">{{ i + 1 }}</span>
+              <div>{{ title }}</div>
+            </div>
+
+          </li>
+        </ul>
+
+        <!-- 새 강의 제목을 입력받는 입력 필드 -->
+        <div class="lecture-item-entire">
+          <input type="text" [(ngModel)]="newCourseTitle" placeholder="새 강의 제목을 입력하세요" />
+          <button (click)="confirmCourse()">확인</button> <!-- 확인 버튼 추가 -->
+        </div>
+
+
+
       </div>
 
 
-      <div *ngIf="activeSection === 'material'" class="material-section">
+      <div *ngIf="activeSection === 'material'" class="active-section">
         <h4>학습자료 내용</h4>
         <!-- 학습 자료의 내용을 여기에 추가하세요 -->
       </div>
