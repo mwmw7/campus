@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ExhibitionService } from "../../../services/exhibitionservice.service";
+import { ExhibitionService } from "../../../services/exhibition/exhibitionservice.service";
 
 @Component({
   selector: 'app-exhibitioncreate',

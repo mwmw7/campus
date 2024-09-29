@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 import { AlertController } from '@ionic/angular';
-import { AuthService } from '../../services/auth.service';
+import { AuthService } from '../../../services/auth/auth.service';
 import { Router } from "@angular/router";
 
 @Component({

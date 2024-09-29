@@ -3,7 +3,7 @@ import {IonicModule} from '@ionic/angular';
 import {RouterLink, RouterLinkActive} from "@angular/router";
 import {CommonModule} from '@angular/common';
 import {ModalController} from '@ionic/angular';
-import {AuthService} from '../../services/auth.service';
+import {AuthService} from '../../services/auth/auth.service';
 import {JoinModalComponent} from "../join-modal/join-modal.component";
 
 @Component({
