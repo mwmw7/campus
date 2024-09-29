@@ -1,0 +1,160 @@
+ion-card-title {
+  font-family: "pretendard-B", serif;
+  color: #464646;
+}
+
+ion-card{
+  border-radius: 10px;
+}
+
+
+
+ion-content {
+  height: 100vh; /* 전체 높이를 100%로 설정 */
+}
+
+.layout {
+  display: flex; /* Flexbox 사용 */
+  height: 100%; /* 전체 높이를 100%로 설정 */
+}
+
+.sidemenu {
+  display: block; /* 또는 inline-block */
+  min-width: 250px; /* 사이드 메뉴의 너비 설정 */
+  max-width: 400px;
+  width: 20vw;
+}
+
+.content-wrapper {
+  flex-grow: 1; /* 남은 공간을 차지하도록 설정 */
+  overflow: auto; /* 콘텐츠가 넘칠 경우 스크롤 가능하도록 설정 */
+
+}
+
+.main-container {
+  height: 120%;
+  background-color: #EDF1F7;
+  flex-direction: column; /* 세로 방향으로 설정 */
+  display: flex; /* Flexbox를 사용 */
+}
+
+.main-container2 {
+  width: 80%;
+  margin: auto;
+}
+
+.top-container {
+  width: 100%;
+  display: flex; /* 가로로 배치 */
+  align-items: center; /* 세로 중앙 정렬 */
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+
+
+.attendance, .blank {
+  width: 50%;
+  max-width: 750px; /* 최대 너비 600px */
+  min-width: 300px; /* 최소 너비 300px */
+  box-sizing: border-box; /* 패딩과 테두리를 포함한 너비 계산 */
+}
+
+.attendance{
+  margin-right: 30px;
+}
+
+
+.attendance ion-card-header {
+  padding-left: 30px;
+  padding-bottom: 10px;
+  padding-top: 30px;
+}
+
+hr {
+  width: 90%;
+  border-bottom: 3px solid;
+  color: #E2E2E2;
+  margin: auto;
+}
+
+.attendance ion-card-content {
+  display: flex;
+  flex-direction: column; /* 세로 방향으로 정렬 */
+  align-items: center; /* 가운데 정렬 */
+  justify-content: center; /* 중앙 정렬 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  height: 80%; /* 전체 높이를 사용하도록 설정 */
+}
+
+.attendance-button {
+  color: white; /* 텍스트 색상 (필요시) */
+  --background: #7269EE; /* Ionic의 CSS 변수를 사용하여 배경색 설정 */
+  font-family: "pretendard-B", serif;
+}
+
+.attendance .qrcode {
+  font-size: clamp(70px, 7vw, 150px);
+  color: #333333;
+}
+
+.attendance .current-time {
+  font-size: 16px;
+  font-family: "pretendard-B", serif;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: black;
+
+}
+
+.attendance .attendance-button {
+  width: 60%;
+  height: 15%;
+  font-size: 20px;
+}
+
+.content-box {
+  height: 35vh;
+  min-width: 300px;
+  min-height: 365px;
+  max-height: 500px;
+  margin: 0;
+}
+
+.class-project {
+  height: 50vh;
+  display: flex;
+}
+
+.class-project2 {
+  width: 80vw;
+  height: 40vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  min-height: 300px;
+}
+
+.bottom-box {
+  display: flex; /* Flexbox를 사용하여 가로 배치 */
+  align-items: center; /* 수직 중앙 정렬 */
+  width: 100%;
+  height: 15vh;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 630px;
+  min-height: 100px;
+  max-height: 200px;
+  border-radius: 15px;
+}
+.process-icon{
+  height: 90%;
+}
+
+.process-icon{
+  height: 70%;
+}
+
+
