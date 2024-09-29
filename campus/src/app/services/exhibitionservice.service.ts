@@ -6,44 +6,34 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ExhibitionService {
-  private apiUrl = 'YOUR_API_URL'; // 실제 API URL로 변경
+  private apiUrl = 'https://your-backend-url.com/api/exhibitions'; // 실제 API URL로 변경하세요.
 
   constructor(private http: HttpClient) {}
 
-  saveExhibitionData(formData: any): Observable<any> {
-    const form = new FormData();
 
-    // formData의 각 필드를 FormData에 추가
-    form.append('projectName', formData.projectName);
-    form.append('teamName', formData.teamName);
-    form.append('course', formData.course);
-    if (formData.thumbnail) {
-      form.append('thumbnail', formData.thumbnail);
-    }
-    form.append('introduce', JSON.stringify(formData.introduce)); // 문자열로 변환
+  // Create: 전시물 생성
+  saveExhibitionData(data: any): Observable<any> {
+    return this.http.post(this.apiUrl, data);
+  }
 
-    formData.members.forEach((member: { name: string; image: File }) => {
-      form.append('members[]', JSON.stringify({ name: member.name }));
-      if (member.image) {
-        form.append('memberImage', member.image);
-      }
-    });
+  // Read: 전시물 목록 가져오기
+  getExhibitions(): Observable<any[]> {
+    return this.http.get<any[]>(this.apiUrl);
+  }
 
-    if (formData.outputImages) {
-      const files = formData.outputImages as File[]; // 타입 단언
-      files.forEach((file) => {
-        form.append('outputImages[]', file);
-      });
-    }
+  // Read: 특정 전시물 가져오기
+  getExhibition(id: string): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/${id}`);
+  }
 
+  // Update: 전시물 수정
+  updateExhibition(id: string, formData: FormData): Observable<any> {
+    return this.http.put<any>(`${this.apiUrl}/${id}`, formData);
+  }
 
-
-    if (formData.outputVideo) {
-      form.append('outputVideo', formData.outputVideo);
-    }
-
-    // HTTP POST 요청
-    return this.http.post(this.apiUrl, form);
+  // Delete: 전시물 삭제
+  deleteExhibition(id: string): Observable<any> {
+    return this.http.delete<any>(`${this.apiUrl}/${id}`);
   }
 }
 
